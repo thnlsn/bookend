@@ -10,8 +10,8 @@ function App() {
     <div className='container'>
       <Header />
       <div className='content'>
-        <nav className='sidebar'>Navigation</nav>
-        <main className='hotel-view'>Hotel view</main>
+        <Sidebar />
+        <HotelView />
       </div>
     </div>
   );
