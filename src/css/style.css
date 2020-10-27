@@ -43,10 +43,12 @@ body {
   border-bottom: var(--color-grey-light-2); }
 
 .content {
-  background-color: transparent; }
+  display: flex; }
 
 .sidebar {
-  background-color: transparent; }
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 18%; }
 
 .hotel-view {
-  background-color: transparent; }
+  background-color: #fff;
+  flex: 1; }
