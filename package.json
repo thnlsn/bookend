@@ -1,6 +1,7 @@
 {
   "name": "bookend",
   "version": "0.1.0",
+  "description": "Landing page for Bookend",
   "private": true,
   "homepage": "https://thnlsn.github.io/hyker/",
   "dependencies": {
