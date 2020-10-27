@@ -1,0 +1,25 @@
+.container {
+  max-width: 120rem; // The main container will only ever be 120rem, but can shrink if there isn't space (to 100% of the available space)
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+
+  //testing
+  min-height: 50rem;
+}
+
+.header {
+  background-color: transparent;
+}
+
+.content {
+  background-color: transparent;
+}
+
+.sidebar {
+  background-color: transparent;
+}
+
+.hotel-view {
+  background-color: transparent;
+}
