@@ -21,6 +21,19 @@ const Header = ({ logo, name }) => {
           </svg>
         </button>
       </form>
+
+      <nav className='user-nav'>
+        <div className='user-nav__icon-box'>
+          <svg className='user-nav__icon'>
+            <use href={`${sprite}#icon-bookmark`}></use>
+          </svg>
+        </div>
+        <div className='user-nav__icon-box'>
+          <svg className='user-nav__icon'>
+            <use href={`${sprite}#icon-chat`}></use>
+          </svg>
+        </div>
+      </nav>
     </header>
   );
 };
