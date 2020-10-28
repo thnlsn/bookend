@@ -40,7 +40,10 @@ body {
 .header {
   height: 7rem;
   background-color: #fff;
-  border-bottom: var(--color-grey-light-2); }
+  border-bottom: var(--color-grey-light-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 .content {
   display: flex; }
@@ -56,29 +59,29 @@ body {
 .logo {
   height: 3.25rem; }
 
-.search__input {
-  background-color: transparent; }
+.search {
+  background-color: orangered; }
+  .search__input {
+    background-color: transparent; }
+  .search__button {
+    background-color: transparent; }
+  .search__icon {
+    height: 2rem;
+    width: 2rem; }
 
-.search__button {
-  background-color: transparent; }
-
-.search__icon {
-  background-color: transparent; }
-
-.user-nav__icon-box {
-  background-color: transparent; }
-
-.user-nav__icon {
-  background-color: transparent; }
-
-.user-nav__notification {
-  background-color: transparent; }
-
-.user-nav__user {
-  background-color: transparent; }
-
-.user-nav__user-photo {
-  background-color: transparent; }
-
-.user-nav__user-name {
-  background-color: transparent; }
+.user-nav {
+  background-color: greenyellow; }
+  .user-nav__icon-box {
+    background-color: transparent; }
+  .user-nav__icon {
+    height: 2.25rem;
+    width: 2.25rem; }
+  .user-nav__notification {
+    background-color: transparent; }
+  .user-nav__user {
+    background-color: transparent; }
+  .user-nav__user-photo {
+    height: 3.75rem;
+    border-radius: 50%; }
+  .user-nav__user-name {
+    background-color: transparent; }

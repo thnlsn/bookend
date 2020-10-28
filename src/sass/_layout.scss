@@ -12,6 +12,10 @@
   height: 7rem;
   background-color: #fff;
   border-bottom: var(--color-grey-light-2);
+
+  display: flex; // This will automatically set all the header children side by side
+  justify-content: space-between; // Maximize the space between each item
+  align-items: center;
 }
 
 .content {

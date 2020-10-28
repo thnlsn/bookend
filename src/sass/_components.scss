@@ -7,6 +7,9 @@
 //////////////////////////////////////////////////////
 // SEARCH
 .search {
+  //testing
+  background-color: orangered;
+
   &__input {
     background-color: transparent;
   }
@@ -16,19 +19,24 @@
   }
 
   &__icon {
-    background-color: transparent;
+    // To set the size of an svg icon, simply setting its height and width will suffice
+    height: 2rem;
+    width: 2rem;
   }
 }
 
 //////////////////////////////////////////////////////
 // USER NAVIGATION
 .user-nav {
+  background-color: greenyellow;
   &__icon-box {
     background-color: transparent;
   }
 
   &__icon {
-    background-color: transparent;
+    // To set the size of an svg icon, simply setting its height and width will suffice
+    height: 2.25rem;
+    width: 2.25rem;
   }
 
   &__notification {
@@ -40,7 +48,8 @@
   }
 
   &__user-photo {
-    background-color: transparent;
+    height: 3.75rem;
+    border-radius: 50%;
   }
 
   &__user-name {
