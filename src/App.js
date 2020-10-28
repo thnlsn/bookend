@@ -14,7 +14,7 @@ import HotelView from './components/MainView';
 function App() {
   return (
     <div className='container'>
-      <Header logo={logo} />
+      <Header logo={logo} name='bookend' />
       <div className='content'>
         <Sidebar />
         <HotelView />
@@ -24,3 +24,9 @@ function App() {
 }
 
 export default App;
+
+/* 
+SVGs
+symbol-defs
+
+*/
