@@ -4,6 +4,7 @@ import './css/style.css';
 
 // IMAGES
 import logo from './images/logo.png';
+import userImage from './images/user.jpg';
 
 // COMPONENTS
 import Header from './components/Header';
@@ -18,7 +19,13 @@ function App() {
 
   return (
     <div className='container'>
-      <Header logo={logo} name='bookend' bookmarks={bookmarks} chats={chats} />
+      <Header
+        logo={logo}
+        name='bookend'
+        bookmarks={bookmarks}
+        chats={chats}
+        userImage={userImage}
+      />
       <div className='content'>
         <Sidebar />
         <HotelView />
