@@ -14,6 +14,7 @@ import HotelView from './components/MainView';
 // APP
 function App() {
   // STATE
+  const [username, setUsername] = useState('Thomas');
   const [bookmarks, setBookmarks] = useState(11);
   const [chats, setChats] = useState(3);
 
@@ -25,6 +26,7 @@ function App() {
         bookmarks={bookmarks}
         chats={chats}
         userImage={userImage}
+        userName={username}
       />
       <div className='content'>
         <Sidebar />

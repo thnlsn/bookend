@@ -3,7 +3,7 @@ import React from 'react';
 // SVG SPRITES
 import sprite from '../images/sprite.svg';
 
-const Header = ({ logo, name, bookmarks, chats, userImage }) => {
+const Header = ({ logo, name, bookmarks, chats, userImage, username }) => {
   return (
     <header className='header'>
       <img src={logo} alt={`${name} logo`} className='logo' />
@@ -41,6 +41,7 @@ const Header = ({ logo, name, bookmarks, chats, userImage }) => {
             alt='User photo'
             className='user-nav__user-photo'
           />
+          <span className='user-nav__user-name'>{username}</span>
         </div>
       </nav>
     </header>
