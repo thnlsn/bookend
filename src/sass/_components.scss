@@ -1,1 +1,49 @@
-// HEADER COMPONENT
+//////////////////////////////////////////////////////
+// LOGO
+.logo {
+  height: 3.25rem;
+}
+
+//////////////////////////////////////////////////////
+// SEARCH
+.search {
+  &__input {
+    background-color: transparent;
+  }
+
+  &__button {
+    background-color: transparent;
+  }
+
+  &__icon {
+    background-color: transparent;
+  }
+}
+
+//////////////////////////////////////////////////////
+// USER NAVIGATION
+.user-nav {
+  &__icon-box {
+    background-color: transparent;
+  }
+
+  &__icon {
+    background-color: transparent;
+  }
+
+  &__notification {
+    background-color: transparent;
+  }
+
+  &__user {
+    background-color: transparent;
+  }
+
+  &__user-photo {
+    background-color: transparent;
+  }
+
+  &__user-name {
+    background-color: transparent;
+  }
+}
