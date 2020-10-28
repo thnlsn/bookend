@@ -9,10 +9,15 @@
 }
 
 .header {
+  // Inherits
+  font-size: 1.4rem;
+
+  // Base styles
   height: 7rem;
   background-color: #fff;
   border-bottom: var(--color-grey-light-2);
 
+  // Flex
   display: flex; // This will automatically set all the header children side by side
   justify-content: space-between; // Maximize the space between each item
   align-items: center;

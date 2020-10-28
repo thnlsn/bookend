@@ -38,6 +38,7 @@ body {
   min-height: 50rem; }
 
 .header {
+  font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
   border-bottom: var(--color-grey-light-2);
@@ -62,7 +63,9 @@ body {
 
 .search {
   flex: 0 0 40%;
-  background-color: orangered; }
+  display: flex;
+  /*   align-items: center; */
+  justify-content: center; }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -78,6 +81,9 @@ body {
       outline: none;
       width: 100%;
       background-color: var(--color-grey-light-3); }
+    .search__input::placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4); }
   .search__button {
     border: none;
     background-color: transparent; }
@@ -87,7 +93,8 @@ body {
       transform: translateY(2px); }
   .search__icon {
     height: 2rem;
-    width: 2rem; }
+    width: 2rem;
+    fill: var(--color-grey-dark-3); }
 
 .user-nav {
   background-color: greenyellow; }

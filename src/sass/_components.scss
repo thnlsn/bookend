@@ -10,6 +10,10 @@
 .search {
   flex: 0 0 40%;
 
+  display: flex; // This is now a nested flexbox element (the whole header is a flex container)
+  /*   align-items: center; */
+  justify-content: center;
+
   &__input {
     font-family: inherit; // Remember, inputs do not inherit the global font declarations
     font-size: inherit; // Remember, inputs do not inherit the global font declarations
@@ -22,10 +26,16 @@
 
     transition: all 0.2s;
     width: 90%; // Initial state -- only 90% because we want to animate it widening when focused
+
     &:focus {
       outline: none;
       width: 100%;
       background-color: var(--color-grey-light-3);
+    }
+
+    &::placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
     }
   }
 
@@ -46,10 +56,8 @@
     // To set the size of an svg icon, simply setting its height and width will suffice
     height: 2rem;
     width: 2rem;
+    fill: var(--color-grey-dark-3);
   }
-
-  //testing
-  background-color: orangered;
 }
 
 //////////////////////////////////////////////////////
