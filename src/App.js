@@ -1,5 +1,5 @@
 // DEPENDENCIES
-import React from 'react';
+import React, { useState } from 'react';
 import './css/style.css';
 
 // IMAGES
@@ -10,11 +10,15 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import HotelView from './components/MainView';
 
-// LAYOUT
+// APP
 function App() {
+  // STATE
+  const [bookmarks, setBookmarks] = useState(11);
+  const [chats, setChats] = useState(3);
+
   return (
     <div className='container'>
-      <Header logo={logo} name='bookend' />
+      <Header logo={logo} name='bookend' bookmarks={bookmarks} chats={chats} />
       <div className='content'>
         <Sidebar />
         <HotelView />

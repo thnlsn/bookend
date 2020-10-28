@@ -3,7 +3,7 @@ import React from 'react';
 // SVG SPRITES
 import sprite from '../images/sprite.svg';
 
-const Header = ({ logo, name }) => {
+const Header = ({ logo, name, bookmarks, chats }) => {
   return (
     <header className='header'>
       <img src={logo} alt={`${name} logo`} className='logo' />
@@ -27,11 +27,13 @@ const Header = ({ logo, name }) => {
           <svg className='user-nav__icon'>
             <use href={`${sprite}#icon-bookmark`}></use>
           </svg>
+          <span className='user-nav__notification'>{bookmarks}</span>
         </div>
         <div className='user-nav__icon-box'>
           <svg className='user-nav__icon'>
             <use href={`${sprite}#icon-chat`}></use>
           </svg>
+          <span className='user-nav__notification'>{chats}</span>
         </div>
       </nav>
     </header>
