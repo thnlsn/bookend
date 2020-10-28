@@ -26,7 +26,7 @@ function App() {
         bookmarks={bookmarks}
         chats={chats}
         userImage={userImage}
-        userName={username}
+        username={username}
       />
       <div className='content'>
         <Sidebar />

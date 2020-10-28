@@ -63,14 +63,33 @@
 //////////////////////////////////////////////////////
 // USER NAVIGATION
 .user-nav {
+  align-self: stretch; // Overwrites the align-items declaration in .header
+
+  display: flex; // Nested flex container
+  align-items: center;
+
+  // This will have the same effect as selecting the __icon-box and __user selectors
+  & > * {
+    height: 100%;
+    padding: 0 2rem;
+    cursor: pointer;
+
+    display: flex; // Nested x2 flex container
+    align-items: center;
+
+    &:hover {
+      background-color: var(--color-grey-light-2);
+    }
+  }
+
   &__icon-box {
-    background-color: transparent;
   }
 
   &__icon {
     // To set the size of an svg icon, simply setting its height and width will suffice
     height: 2.25rem;
     width: 2.25rem;
+    fill: var(--color-grey-dark-2);
   }
 
   &__notification {
