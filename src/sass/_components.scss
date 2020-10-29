@@ -3,7 +3,7 @@
 // ### BLOCK: the logo on the top left of the page
 .logo {
   height: 3.25rem;
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -109,7 +109,7 @@
     font-size: 0.8rem;
     height: 1.75rem;
     width: 1.75rem;
-    border-radius: 50%;
+    border-radius: 50%; // Make the notification bubble an actual bubble (circle)
     background-color: var(--color-primary);
     color: var(--color-grey-light-1);
 
@@ -131,10 +131,6 @@
   &__user-photo {
     height: 3.75rem;
     border-radius: 50%;
-  }
-
-  // ### ELEMENT: the username/name by the photo
-  &__user-name {
-    background-color: transparent;
+    margin-right: 1rem;
   }
 }
