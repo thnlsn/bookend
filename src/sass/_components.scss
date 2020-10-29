@@ -75,7 +75,7 @@
   display: flex; // Nested flex container
   align-items: center;
 
-  // This will have the same effect as selecting the __icon-box and __user selectors
+  // All children of user-nav (so both icon-box and the user-box)
   & > * {
     height: 100%;
     padding: 0 2rem;
@@ -91,6 +91,7 @@
 
   // ### ELEMENT: the box containing the SVG icons
   &__icon-box {
+    position: relative;
   }
 
   // ### ELEMENT: the SVG icons (the bookmark and chat icons)
@@ -100,7 +101,7 @@
     width: 2.25rem;
     fill: var(
       --color-grey-dark-2
-    ); // Fill is basically color for text, but for svgs
+    ); // Fill is basically color for text, but for SVGs
   }
 
   // ### ELEMENT: the red bubble notifications
@@ -111,6 +112,14 @@
     border-radius: 50%;
     background-color: var(--color-primary);
     color: var(--color-grey-light-1);
+
+    position: absolute; // Position it on the top right of the icons
+    top: 1.5rem;
+    right: 1.15rem;
+
+    display: flex; // Making the span containing the text a flex item to be centered
+    align-items: center; // Center the notification numbers vertically (across cross axis)
+    justify-content: center; // Center the notification numbers horizontally (across main axis)
   }
 
   // ### ELEMENT: the user information box (the profile photo and name)
