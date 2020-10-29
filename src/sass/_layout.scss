@@ -30,9 +30,15 @@
 .sidebar {
   background-color: var(--color-grey-dark-1);
   flex: 0 0 18%; // Do not want it to grow OR shrink, but we want it always to stay 18% of the container width (because of %, it will shrink regardless)
+
+  display: flex;
+  flex-direction: column; // Because the sidebar should be a column rather than the default row
+  justify-content: space-between; // So the legal text is pushed to the bottom
 }
 
 .hotel-view {
   background-color: #fff;
+  height: 80rem;
+
   flex: 1; // Allow the element to grow as much as it can, basically the rest of the space not taken up by other elements basis so 82% (sidebar takes 18% above)
 }
