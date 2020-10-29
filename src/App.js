@@ -29,7 +29,16 @@ function App() {
         username={username}
       />
       <div className='content'>
-        <Sidebar />
+        <Sidebar
+          // Supply arrays of SVGs and titles, they will be matched by index, so the first icon will be with the first title, and so on
+          icons={[
+            '#icon-home',
+            '#icon-aircraft-take-off',
+            '#icon-key',
+            '#icon-map',
+          ]}
+          titles={['Hotel', 'Flight', 'Car Rental', 'Tours']}
+        />
         <HotelView />
       </div>
     </div>
@@ -41,5 +50,7 @@ export default App;
 /* 
 SVGs
 symbol-defs
-
+>
+*
+~
 */
