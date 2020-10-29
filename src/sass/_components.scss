@@ -1,12 +1,14 @@
-//////////////////////////////////////////////////////
-// LOGO
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// LOGO ////////////////////////////////////////////////////////////////////////////////////////////////////
+// ### BLOCK: the logo on the top left of the page
 .logo {
   height: 3.25rem;
   margin-left: 3rem;
 }
 
-//////////////////////////////////////////////////////
-// SEARCH
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SEARCH //////////////////////////////////////////////////////////////////////////////////////////////////
+// ### BLOCK: the form element containing the searchbar and search button
 .search {
   flex: 0 0 40%;
 
@@ -14,6 +16,7 @@
   /*   align-items: center; */
   justify-content: center;
 
+  // ### ELEMENT: the searchbar input
   &__input {
     font-family: inherit; // Remember, inputs do not inherit the global font declarations
     font-size: inherit; // Remember, inputs do not inherit the global font declarations
@@ -24,6 +27,7 @@
     padding: 0.7rem 2rem;
     margin-right: -3.5rem; // So that the button will be on top of the searchbar
 
+    // Default styles to be animated
     transition: all 0.2s;
     width: 90%; // Initial state -- only 90% because we want to animate it widening when focused
 
@@ -39,6 +43,7 @@
     }
   }
 
+  // ### ELEMENT: the magnifying glass icon inside the searchbar input
   &__button {
     border: none;
     background-color: transparent;
@@ -52,6 +57,7 @@
     }
   }
 
+  // ### ELEMENT: the SVG icon (magnifying glass)
   &__icon {
     // To set the size of an svg icon, simply setting its height and width will suffice
     height: 2rem;
@@ -60,8 +66,9 @@
   }
 }
 
-//////////////////////////////////////////////////////
-// USER NAVIGATION
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// USER NAVIGATION /////////////////////////////////////////////////////////////////////////////////////////
+// ### BLOCK: the container for each of the user navigation buttons (bookmarks, chat, user)
 .user-nav {
   align-self: stretch; // Overwrites the align-items declaration in .header
 
@@ -82,33 +89,43 @@
     }
   }
 
+  // ### ELEMENT: the box containing the SVG icons
   &__icon-box {
   }
 
+  // ### ELEMENT: the SVG icons (the bookmark and chat icons)
   &__icon {
-    // To set the size of an svg icon, simply setting its height and width will suffice
+    // To set the size of an SVG icon, simply setting its height and width will suffice
     height: 2.25rem;
     width: 2.25rem;
-    fill: var(--color-grey-dark-2);
+    fill: var(
+      --color-grey-dark-2
+    ); // Fill is basically color for text, but for svgs
   }
 
+  // ### ELEMENT: the red bubble notifications
   &__notification {
+    font-size: 0.8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-grey-light-1);
+  }
+
+  // ### ELEMENT: the user information box (the profile photo and name)
+  &__user-box {
     background-color: transparent;
   }
 
-  &__user {
-    background-color: transparent;
-  }
-
+  // ### ELEMENT: the circle profile image
   &__user-photo {
     height: 3.75rem;
     border-radius: 50%;
   }
 
+  // ### ELEMENT: the username/name by the photo
   &__user-name {
     background-color: transparent;
   }
-
-  //testing
-  background-color: greenyellow;
 }

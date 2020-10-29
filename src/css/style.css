@@ -99,8 +99,7 @@ body {
 .user-nav {
   align-self: stretch;
   display: flex;
-  align-items: center;
-  background-color: greenyellow; }
+  align-items: center; }
   .user-nav > * {
     height: 100%;
     padding: 0 2rem;
@@ -114,8 +113,13 @@ body {
     width: 2.25rem;
     fill: var(--color-grey-dark-2); }
   .user-nav__notification {
-    background-color: transparent; }
-  .user-nav__user {
+    font-size: 0.8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-grey-light-1); }
+  .user-nav__user-box {
     background-color: transparent; }
   .user-nav__user-photo {
     height: 3.75rem;
