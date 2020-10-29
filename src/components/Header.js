@@ -36,11 +36,7 @@ const Header = ({ logo, name, bookmarks, chats, userImage, username }) => {
           <span className='user-nav__notification'>{chats}</span>
         </div>
         <div className='user-nav__user-box'>
-          <img
-            src={userImage}
-            alt='User photo'
-            className='user-nav__user-photo'
-          />
+          <img src={userImage} alt='User' className='user-nav__user-photo' />
           <span className='user-nav__user-name'>{username}</span>
         </div>
       </nav>

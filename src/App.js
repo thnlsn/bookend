@@ -30,7 +30,7 @@ function App() {
       />
       <div className='content'>
         <Sidebar
-          // Supply arrays of SVGs and titles, they will be matched by index, so the first icon will be with the first title, and so on
+          // Supply arrays of SVGs, titles, and hrefs, they will be matched by index, so the first icon will be with the first title and href, and so on
           icons={[
             '#icon-home',
             '#icon-aircraft-take-off',
@@ -38,6 +38,7 @@ function App() {
             '#icon-map',
           ]}
           titles={['Hotel', 'Flight', 'Car Rental', 'Tours']}
+          hrefs={['#', '#', '#', '#']}
         />
         <HotelView />
       </div>
