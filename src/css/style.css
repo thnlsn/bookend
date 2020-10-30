@@ -148,12 +148,14 @@ body {
   margin-top: 3.5rem; }
   .side-nav__item {
     background-color: transparent; }
-  .side-nav__link {
+  .side-nav__link:link, .side-nav__link:visited {
     color: var(--color-grey-light-1);
     text-decoration: none;
     text-transform: uppercase;
     display: block;
-    padding: 1.5rem 3rem; }
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center; }
   .side-nav__icon {
     height: 1.75rem;
     width: 1.75rem;

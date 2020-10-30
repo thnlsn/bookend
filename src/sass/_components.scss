@@ -149,12 +149,17 @@
   }
 
   // ### The actual link to click on, but also contains the SVG icon and the span that holds the text
-  &__link {
+  // Always target multiple pseudoclasses unless you want custom styles for different states of a link
+  &__link:link,
+  &__link:visited {
     color: var(--color-grey-light-1);
     text-decoration: none; // Remove the underline of default links
     text-transform: uppercase;
     display: block;
     padding: 1.5rem 3rem;
+
+    display: flex;
+    align-items: center; // To align the icon and the span for each link
   }
 
   // ### The SVG icon
@@ -166,6 +171,9 @@
   }
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// COPYRIGHT TEXT //////////////////////////////////////////////////////////////////////////////////////////
+// ### BLOCK: the legal text at the bottom of the sidebar, is a flex child alongside .side-nav
 .legal-text {
   font-size: 1.2rem;
   color: var(--color-grey-light-4);
