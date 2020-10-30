@@ -54,4 +54,6 @@ symbol-defs
 >
 *
 ~
+currentColor
+fill
 */
