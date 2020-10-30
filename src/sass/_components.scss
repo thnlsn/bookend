@@ -145,7 +145,31 @@
 
   // ### The container for the link and icon
   &__item {
-    background-color: transparent;
+    position: relative; // For the absolute positioning of the ::before red hover animation
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%; // So it is the same height as the list item
+      background-color: var(--color-primary);
+
+      // Initial animation state
+      transition: transform 0.2s, width 0.5s cubic-bezier(1, -0.02, 0, 1);
+      width: 3px;
+      transform: scaleY(0);
+    }
+
+    &:hover::before {
+      // Ending animation state
+      transform: scaleY(1);
+      width: 100%;
+    }
   }
 
   // ### The actual link to click on, but also contains the SVG icon and the span that holds the text
@@ -160,6 +184,9 @@
 
     display: flex;
     align-items: center; // To align the icon and the span for each link
+
+    position: relative;
+    z-index: 100;
   }
 
   // ### The SVG icon

@@ -56,4 +56,6 @@ symbol-defs
 ~
 currentColor
 fill
+z-index (and how it only works with position)
+transition-origin (change where an animation begins)
 */
