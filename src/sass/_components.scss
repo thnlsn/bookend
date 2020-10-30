@@ -139,14 +139,21 @@
 // SIDE NAVIGATION /////////////////////////////////////////////////////////////////////////////////////////
 // ### BLOCK: the container for the sidebar links list as well as the legal text
 .side-nav {
+  font-size: 1.4rem;
+  list-style: none; // Remove the bullet points that come with links
+  margin-top: 3.5rem;
+
+  // ### The container for the link and icon
   &__item {
     background-color: transparent;
   }
 
+  // ### The actual link to click on, but also contains the SVG icon and the span that holds the text
   &__link {
     background-color: transparent;
   }
 
+  // ### The SVG icon
   &__icon {
     height: 1.75rem;
     width: 1.75rem;
