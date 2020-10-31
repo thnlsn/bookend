@@ -9,7 +9,7 @@ const HotelView = ({ images }) => {
             <img
               src={hotel}
               alt={`Hotel ${index + 1}`}
-              className='gallery__item'
+              className='gallery__photo'
             />
           </figure>
         ))}

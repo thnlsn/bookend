@@ -62,7 +62,6 @@ body {
 
 .main-view {
   background-color: #fff;
-  background-color: var(--color-grey-light-2);
   height: 80rem;
   flex: 1; }
 
@@ -185,3 +184,9 @@ body {
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem; }
+
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
