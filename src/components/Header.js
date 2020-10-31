@@ -3,7 +3,15 @@ import React from 'react';
 // SVG SPRITES
 import sprite from '../images/sprite.svg';
 
-const Header = ({ logo, name, bookmarks, chats, userImage, username }) => {
+const Header = ({
+  logo,
+  name,
+  bookmarks,
+  chats,
+  userImage,
+  username,
+  currentPage,
+}) => {
   return (
     <header className='header'>
       <img src={logo} alt={`${name} logo`} className='logo' />
@@ -12,7 +20,7 @@ const Header = ({ logo, name, bookmarks, chats, userImage, username }) => {
         <input
           type='text'
           className='search__input'
-          placeholder='Search hotels'
+          placeholder={`Search ${currentPage}`}
         />
         {/* Rather than icon-fonts, this project uses SVGs (Scalable Vector Graphics), as they are more trustworthy and best practice */}
         <button className='search__button'>

@@ -16,6 +16,8 @@ import FlightView from './components/Views/FlightView';
 import CarRentalView from './components/Views/CarRentalView';
 import ToursView from './components/Views/ToursView';
 
+// ROUTES
+// Including their path, exact or not, and the component to display
 const routes = [
   {
     path: '/hotels',
@@ -39,6 +41,11 @@ const routes = [
   },
 ];
 
+const getCurrentPage = () => {
+  return window.location.pathname;
+};
+console.log(getCurrentPage());
+
 // APP
 function App() {
   // STATE
@@ -55,6 +62,7 @@ function App() {
         chats={chats}
         userImage={userImage}
         username={username}
+        currentPage={'yolo'}
       />
       <div className='content'>
         <Router>
@@ -67,11 +75,19 @@ function App() {
               '#icon-map',
             ]}
             titles={['Hotel', 'Flight', 'Car Rental', 'Tours']}
-            hrefs={['#', '#', '#', '#']}
+            hrefs={['/hotels', '/flights', '/cars', '/tours']}
           />
+          <main className='main-view'>
+            {routes.map((route, index) => (
+              <Route
+                key={index}
+                path={route.path}
+                exact={route.exact}
+                children={<route.main />}
+              />
+            ))}
+          </main>
         </Router>
-        <main className='main-view'></main>
-        {/*         <HotelView /> */}
       </div>
     </div>
   );
