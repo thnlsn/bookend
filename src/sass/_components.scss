@@ -160,7 +160,7 @@
       background-color: var(--color-primary);
 
       // Initial animation state
-      transition: transform 0.2s, width 0.5s cubic-bezier(1, -0.02, 0, 1);
+      transition: transform 0.2s, width 0.45s cubic-bezier(1, -0.02, 0, 1);
       width: 3px;
       transform: scaleY(0);
     }
