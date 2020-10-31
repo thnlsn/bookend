@@ -29,7 +29,9 @@ const routes = [
   {
     path: '/hotels',
     exact: true,
-    main: () => <HotelView images={[hotelImage1, hotelImage2, hotelImage3]} />,
+    main: () => (
+      <HotelView images={[hotelImage1, hotelImage2, hotelImage3]} stars={5} />
+    ),
   },
   {
     path: '/flights',
@@ -48,17 +50,12 @@ const routes = [
   },
 ];
 
-const getCurrentPage = () => {
-  return window.location.pathname;
-};
-console.log(getCurrentPage());
-
 // APP
 function App() {
   // STATE
-  const [username, setUsername] = useState('Thomas');
-  const [bookmarks, setBookmarks] = useState(11);
-  const [chats, setChats] = useState(3);
+  const [username /* setUsername */] = useState('Thomas');
+  const [bookmarks /* setBookmarks */] = useState(11);
+  const [chats /* setChats */] = useState(3);
 
   return (
     <div className='container'>
@@ -69,7 +66,7 @@ function App() {
         chats={chats}
         userImage={userImage}
         username={username}
-        currentPage={'yolo'}
+        currentPage={''}
       />
       <div className='content'>
         <Router>
@@ -112,4 +109,5 @@ currentColor
 fill
 z-index (and how it only works with position)
 transition-origin (change where an animation begins)
+display: block; on img elements specifically
 */

@@ -7,7 +7,6 @@ import {
 import sprite from '../../images/sprite.svg';
 
 const SidebarLink = ({ icon, title, href }) => {
-  console.log(href);
   return (
     <li className='side-nav__item side-nav__item--active'>
       <Link to={`${href}`} className='side-nav__link'>

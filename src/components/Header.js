@@ -12,7 +12,6 @@ const Header = ({
   username,
   currentPage,
 }) => {
-  console.log(logo);
   return (
     <header className='header'>
       <img src={logo} alt={`${name} logo`} className='logo' />
