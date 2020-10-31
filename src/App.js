@@ -6,6 +6,10 @@ import './css/style.css';
 // IMAGES
 import logo from './images/logo.png';
 import userImage from './images/user.jpg';
+// Hotel view
+import hotelImage1 from './images/hotel-1.jpg';
+import hotelImage2 from './images/hotel-2.jpg';
+import hotelImage3 from './images/hotel-3.jpg';
 
 // COMPONENTS
 import Header from './components/Header';
@@ -22,7 +26,7 @@ const routes = [
   {
     path: '/hotels',
     exact: true,
-    main: () => <HotelView />,
+    main: () => <HotelView images={[hotelImage1, hotelImage2, hotelImage3]} />,
   },
   {
     path: '/flights',
