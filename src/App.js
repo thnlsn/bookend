@@ -32,6 +32,8 @@ const routes = [
     main: () => (
       <HotelView
         images={[hotelImage1, hotelImage2, hotelImage3]}
+        hotelName={'Hotel Las Palmas'}
+        hotelLocation={'Albufeira, Portugal'}
         stars={4}
         rating={8.4}
         votes={409}
@@ -116,4 +118,9 @@ z-index (and how it only works with position)
 transition-origin (change where an animation begins)
 display: block; on img elements specifically
 margin-right/left: auto (specifically on flex items)
+infinite
+text-transform
+flex-wrap
+CSS Masks (mask-image, mask-size)
+
 */

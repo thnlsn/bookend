@@ -3,7 +3,14 @@ import React, { Fragment } from 'react';
 // SVG SPRITES
 import sprite from '../../images/sprite.svg';
 
-const HotelView = ({ images, stars, rating, votes }) => {
+const HotelView = ({
+  images,
+  stars,
+  rating,
+  votes,
+  hotelName,
+  hotelLocation,
+}) => {
   const generateStars = () => {
     let rating = [];
     for (let i = 0; i < 5; i++) {
@@ -39,7 +46,7 @@ const HotelView = ({ images, stars, rating, votes }) => {
       </div>
 
       <div className='overview'>
-        <h1 className='overview__heading'>Hotel Las Palmas</h1>
+        <h1 className='overview__heading'>{hotelName}</h1>
 
         <div className='overview__stars'>{generateStars()}</div>
 
@@ -47,7 +54,7 @@ const HotelView = ({ images, stars, rating, votes }) => {
           <svg className='overview__icon-location'>
             <use href={`${sprite}#icon-location-pin`}></use>
           </svg>
-          <button className='btn-inline'>Albufeira, Portugal</button>
+          <button className='btn-inline'>{hotelLocation}</button>
         </div>
 
         <div className='overview__rating'>
