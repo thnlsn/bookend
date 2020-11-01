@@ -190,3 +190,20 @@ body {
   .gallery__photo {
     width: 100%;
     display: block; }
+
+.overview {
+  background-color: transparent; }
+  .overview__heading {
+    background-color: transparent; }
+  .overview__stars {
+    background-color: transparent; }
+  .overview__icon-star, .overview__icon-location {
+    background-color: transparent; }
+  .overview__location {
+    background-color: transparent; }
+  .overview__rating {
+    background-color: transparent; }
+  .overview__rating-average {
+    background-color: transparent; }
+  .overview__rating-count {
+    background-color: transparent; }

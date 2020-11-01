@@ -217,3 +217,38 @@
     display: block; // Images should always be a block so it does not have small whitespace under it
   }
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// HOTEL OVERVIEW //////////////////////////////////////////////////////////////////////////////////////////
+.overview {
+  background-color: transparent;
+
+  &__heading {
+    background-color: transparent;
+  }
+
+  &__stars {
+    background-color: transparent;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    background-color: transparent;
+  }
+
+  &__location {
+    background-color: transparent;
+  }
+
+  &__rating {
+    background-color: transparent;
+  }
+
+  &__rating-average {
+    background-color: transparent;
+  }
+
+  &__rating-count {
+    background-color: transparent;
+  }
+}
