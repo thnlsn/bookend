@@ -43,6 +43,8 @@
   flex: 1; // Allow the element to grow as much as it can, basically the rest of the space not taken up by other elements basis so 82% (sidebar takes 18% above)
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// HOTEL VIEW CONTENT LAYOUT ///////////////////////////////////////////////////////////////////////////////
 .detail {
   display: flex;
   padding: 4.5rem;
@@ -51,12 +53,16 @@
 }
 
 .description {
-  background-color: orangered;
-  flex: 0 0 60%; // Usually if the flex basis is a percentage, the grow and shrink will be 0, because if you want a specific size, you dont want it to grow or shrink
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
   margin-right: 4.5rem;
+
+  flex: 0 0 60%; // Usually if the flex basis is a percentage, the grow and shrink will be 0, because if you want a specific size, you dont want it to grow or shrink
 }
 
 .user-reviews {
   background-color: yellowgreen;
+
   flex: 1; // Grow
 }
