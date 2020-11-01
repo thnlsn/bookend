@@ -195,6 +195,13 @@
     width: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; // Takes on the color of the parent element (kind of like inheriting values, but on a different property)
+
+    &--primary {
+      height: 1.75rem;
+      width: 1.75rem;
+      margin-right: 2rem;
+      fill: var(--color-primary);
+    }
   }
 }
 

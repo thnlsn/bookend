@@ -178,6 +178,11 @@ body {
     width: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+    .side-nav__icon--primary {
+      height: 1.75rem;
+      width: 1.75rem;
+      margin-right: 2rem;
+      fill: var(--color-primary); }
 
 .legal-text {
   font-size: 1.2rem;

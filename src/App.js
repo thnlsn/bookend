@@ -30,7 +30,7 @@ const routes = [
     path: '/hotels',
     exact: true,
     main: () => (
-      <HotelView images={[hotelImage1, hotelImage2, hotelImage3]} stars={5} />
+      <HotelView images={[hotelImage1, hotelImage2, hotelImage3]} stars={4} />
     ),
   },
   {
