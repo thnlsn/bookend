@@ -15,7 +15,7 @@ const HotelView = ({ images, stars, rating, votes }) => {
         );
       } else {
         rating.push(
-          <svg className='overview__icon-star' key={i}>
+          <svg className='overview__icon-star--grey' key={i}>
             <use href={`${sprite}#icon-star`}></use>
           </svg>
         );

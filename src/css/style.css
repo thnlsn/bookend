@@ -192,15 +192,19 @@ body {
     display: block; }
 
 .overview {
-  background-color: transparent; }
+  display: flex; }
   .overview__heading {
     background-color: transparent; }
   .overview__stars {
     background-color: transparent; }
   .overview__icon-star, .overview__icon-location {
-    background-color: transparent; }
-  .overview__location {
-    background-color: transparent; }
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary); }
+    .overview__icon-star--grey, .overview__icon-location--grey {
+      width: 1.75rem;
+      height: 1.75rem;
+      fill: var(--color-grey-dark-2); }
   .overview__rating {
     background-color: transparent; }
   .overview__rating-average {
