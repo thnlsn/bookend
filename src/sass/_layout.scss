@@ -15,7 +15,7 @@
   // Base styles
   height: 7rem;
   background-color: #fff;
-  border-bottom: 1px solid var(--color-grey-light-2);
+  border-bottom: var(--line);
 
   // Flex
   display: flex; // This will automatically set all the header children side by side
@@ -41,4 +41,22 @@
   height: 80rem; //testing
 
   flex: 1; // Allow the element to grow as much as it can, basically the rest of the space not taken up by other elements basis so 82% (sidebar takes 18% above)
+}
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+}
+
+.description {
+  background-color: orangered;
+  flex: 0 0 60%; // Usually if the flex basis is a percentage, the grow and shrink will be 0, because if you want a specific size, you dont want it to grow or shrink
+  margin-right: 4.5rem;
+}
+
+.user-reviews {
+  background-color: yellowgreen;
+  flex: 1; // Grow
 }

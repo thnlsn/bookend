@@ -33,6 +33,7 @@ const HotelView = ({
 
   return (
     <Fragment>
+      {/* IMAGE GALLERY */}
       <div className='gallery'>
         {images.map((hotel, index) => (
           <figure className='gallery__item' key={index}>
@@ -45,6 +46,7 @@ const HotelView = ({
         ))}
       </div>
 
+      {/* OVERVIEW HEADER */}
       <div className='overview'>
         <h1 className='overview__heading'>{hotelName}</h1>
 
@@ -61,6 +63,14 @@ const HotelView = ({
           <div className='overview__rating-average'>{rating}</div>
           <div className='overview__rating-count'>{votes} votes</div>
         </div>
+      </div>
+
+      {/* DETAILS MAIN SECTION */}
+      <div className='detail'>
+        {/* This blocks styles will be determined in the layout sass file because it is more concerned with layout */}
+        <div className='description'>Description</div>
+
+        <div className='user-reviews'>User reviews</div>
       </div>
     </Fragment>
   );
