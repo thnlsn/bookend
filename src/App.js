@@ -37,6 +37,17 @@ const routes = [
         stars={4}
         rating={8.4}
         votes={409}
+        benefits={[
+          'Close to the beach',
+          'Breakfast included',
+          'Free airport shuttle',
+          'Free wifi in all rooms',
+          'Air conditioning',
+          'Pets allowed',
+          'We speak all languages',
+          'Perfect for families',
+        ]}
+        recommendations={['Stephanie', 'Ethan', 'Marilyn', 'Andy']}
       />
     ),
   },

@@ -10,6 +10,7 @@ const HotelView = ({
   votes,
   hotelName,
   hotelLocation,
+  benefits,
 }) => {
   const generateStars = () => {
     let rating = [];
@@ -68,7 +69,26 @@ const HotelView = ({
       {/* DETAILS MAIN SECTION */}
       <div className='detail'>
         {/* This blocks styles will be determined in the layout sass file because it is more concerned with layout */}
-        <div className='description'>Description</div>
+        <div className='description'>
+          <p className='paragraph'>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+            hic consectetur corrupti, accusantium cumque, ut quos illo debitis
+            quasi laborum enim facilis optio.
+          </p>
+          <p className='paragraph'>
+            Nemo aliquam ipsum facilis sunt veritatis architecto voluptatibus
+            autem excepturi. Doloribus dolores ex dolorum ad earum minima
+            tenetur expedita non fuga illum!
+          </p>
+          <ul className='list'>
+            {benefits.map((benefit) => (
+              <li className='list-item'>{benefit}</li>
+            ))}
+          </ul>
+          <div className='recommend'>
+            <p className='recommend__count'></p>
+          </div>
+        </div>
 
         <div className='user-reviews'>User reviews</div>
       </div>
