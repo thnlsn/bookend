@@ -236,6 +236,8 @@
 
   &__stars {
     margin-right: auto; // This is a good flexbox trick to essentially push an item all the way to another side
+    // This is more to fix the styling of the SVG star icons, rather than actually needing them to be flex items
+    display: flex; // The icons in the overview__stars are now flex items and will lose the inline styles that come wiht SVGs (such as line height similar to text and other inline elements)
   }
 
   &__icon-star,
@@ -264,5 +266,30 @@
 
   &__rating-count {
     background-color: transparent;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// BUTTON INLINE ///////////////////////////////////////////////////////////////////////////////////////////
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit; // Since it is an inline button, inheriting the font-size makes sense, as you'd want it to be the same as the text in line. Also makes it more modular and reusable
+  border-bottom: 1px solid currentColor; // This will simply take the same color as the text (so the value in color: above) and will do the same if the color changes in different states
+  padding-bottom: 2px;
+  display: inline-block;
+  background-color: transparent; // This is because we want to use this inline, so it shouldnt have a fixed color, so it can be used anywhere (modular & reusable)
+  cursor: pointer;
+
+  transition: all 0.2s;
+
+  &:hover {
+    color: var(
+      --color-grey-dark-1
+    ); // The border will change color as well since we used currentColor
+  }
+
+  &:focus {
+    outline: none; // Get rid of the outline when focused (which is a browser default)
   }
 }
