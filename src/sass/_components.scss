@@ -221,14 +221,21 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // HOTEL OVERVIEW //////////////////////////////////////////////////////////////////////////////////////////
 .overview {
+  border-bottom: 1px solid var(--color-grey-light-2);
+
   display: flex;
+  align-items: center;
 
   &__heading {
-    background-color: transparent;
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
   }
 
   &__stars {
-    background-color: transparent;
+    margin-right: auto; // This is a good flexbox trick to essentially push an item all the way to another side
   }
 
   &__icon-star,
@@ -244,6 +251,7 @@
   }
 
   &__location {
+    /*     margin-right: auto; */
   }
 
   &__rating {

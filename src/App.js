@@ -115,4 +115,5 @@ fill
 z-index (and how it only works with position)
 transition-origin (change where an animation begins)
 display: block; on img elements specifically
+margin-right/left: auto (specifically on flex items)
 */
