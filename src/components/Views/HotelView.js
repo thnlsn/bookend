@@ -91,7 +91,7 @@ const HotelView = ({
           </p>
           <ul className='list'>
             {benefits.map((benefit) => (
-              <li className='list-item'>{benefit}</li>
+              <li className='list__item'>{benefit}</li>
             ))}
           </ul>
           <div className='recommend'>

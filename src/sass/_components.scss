@@ -335,6 +335,13 @@
 
   border-top: var(--line);
   border-bottom: var(--line);
+
+  display: flex;
+  flex-wrap: wrap; // Allows elements to wrap, but it will be inconsistant without width or basis
+
+  &__item {
+    flex: 0 0 50%; // So that each item takes 50% of the width, effectively making it 2 colums of items, since only 2 will be able to fit per row
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
