@@ -274,3 +274,6 @@ body {
     outline: none; }
   .btn-inline:active {
     transform: scale(0.97); }
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
