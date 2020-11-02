@@ -35,7 +35,6 @@
 
 .main-view {
   background-color: #fff;
-  height: 80rem; //testing
 
   flex: 1; // Allow the element to grow as much as it can, basically the rest of the space not taken up by other elements basis so 82% (sidebar takes 18% above)
 }
@@ -50,6 +49,7 @@
 }
 
 .description {
+  font-size: 1.4rem; // This will determine the font for the entire container because of inheritance
   background-color: #fff;
   box-shadow: var(--shadow-light);
   padding: 3rem;
