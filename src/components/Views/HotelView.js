@@ -11,6 +11,7 @@ const HotelView = ({
   hotelName,
   hotelLocation,
   benefits,
+  friends,
 }) => {
   const generateStars = () => {
     let rating = [];
@@ -30,6 +31,14 @@ const HotelView = ({
       }
     }
     return rating;
+  };
+
+  const multipleFriends = () => {
+    if (friends.length < 1) {
+      return true;
+    } else {
+      return false;
+    }
   };
 
   return (
@@ -86,7 +95,21 @@ const HotelView = ({
             ))}
           </ul>
           <div className='recommend'>
-            <p className='recommend__count'></p>
+            <p className='recommend__count'>
+              {friends.length > 1 ? (
+                <span>
+                  {friends[0].name} and {friends.length} friends recommend this
+                  hotel.
+                </span>
+              ) : (
+                <span>{friends[0].name} recommends this hotel.</span>
+              )}
+            </p>
+            <div className='recommend__friends'>
+              {friends.map((friend, index) => (
+                <img src={friend.photo} alt='' className='recommend__photo' />
+              ))}
+            </div>
           </div>
         </div>
 

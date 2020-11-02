@@ -13,6 +13,10 @@ import userImage from './images/user.jpg';
 import hotelImage1 from './images/hotel-1.jpg';
 import hotelImage2 from './images/hotel-2.jpg';
 import hotelImage3 from './images/hotel-3.jpg';
+import user3 from './images/user-3.jpg';
+import user4 from './images/user-4.jpg';
+import user5 from './images/user-5.jpg';
+import user6 from './images/user-6.jpg';
 
 // COMPONENTS
 import Header from './components/Header';
@@ -47,7 +51,12 @@ const routes = [
           'We speak all languages',
           'Perfect for families',
         ]}
-        recommendations={['Stephanie', 'Ethan', 'Marilyn', 'Andy']}
+        friends={[
+          { name: 'Andy', photo: user3 },
+          { name: 'Fernando', photo: user4 },
+          { name: 'Ethan', photo: user5 },
+          { name: 'Marilyn', photo: user6 },
+        ]}
       />
     ),
   },
