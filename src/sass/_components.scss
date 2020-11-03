@@ -374,7 +374,7 @@
   align-items: center;
 
   &__count {
-    background-color: transparent;
+    margin-right: auto; // Very useful tool to position elements in a flexbox
   }
 
   &__friends {
@@ -382,6 +382,7 @@
   }
 
   &__photo {
+    box-sizing: content-box;
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
