@@ -3,6 +3,9 @@ import React, { Fragment } from 'react';
 // SVG SPRITES
 import sprite from '../../images/sprite.svg';
 
+// COMPONENTS
+import Review from './ViewComponents/Review';
+
 const HotelView = ({
   images,
   stars,
@@ -12,6 +15,8 @@ const HotelView = ({
   hotelLocation,
   benefits,
   friends,
+  review1,
+  review2,
 }) => {
   const generateStars = () => {
     let rating = [];
@@ -107,30 +112,24 @@ const HotelView = ({
             </p>
             <div className='recommend__friends'>
               {friends.map((friend, index) => (
-                <img src={friend.photo} alt='' className='recommend__photo' />
+                <img
+                  src={friend.photo}
+                  alt='Friend photo'
+                  className='recommend__photo'
+                />
               ))}
             </div>
           </div>
         </div>
 
         <div className='user-reviews'>
-          <div className='review'>
-            {/* Figures are great for text and descriptions of images, not just images */}
-            <figure className='review'>
-              <blockquote className='review__text'>
-                Itaque quas, culpa rem perspiciatis obcaecati illo eligendi
-                minima, necessitatibus architecto distinctio similique quis.
-                <figcaption className='review__user'>
-                  <img src='' alt='' className='review__photo' />
-                  <div className='review__user-box'>
-                    <p className='user__name'>fdkjhfdj</p>
-                    <p className='review__user-date'>fdsiujhifd</p>
-                  </div>
-                  <div className='review__rating'>7.8dfsafads</div>
-                </figcaption>
-              </blockquote>
-            </figure>
-          </div>
+          <Review
+            quote={review1.quote}
+            photo={review1.photo}
+            name={review1.name}
+            date={review1.date}
+            rating={review1.rating}
+          />
         </div>
       </div>
     </Fragment>

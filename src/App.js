@@ -9,7 +9,7 @@ import './css/style.css';
 // IMAGES
 import logo from './images/logo.png';
 import userImage from './images/user.jpg';
-// Hotel view
+//// Hotel view
 import hotelImage1 from './images/hotel-1.jpg';
 import hotelImage2 from './images/hotel-2.jpg';
 import hotelImage3 from './images/hotel-3.jpg';
@@ -17,6 +17,8 @@ import user3 from './images/user-3.jpg';
 import user4 from './images/user-4.jpg';
 import user5 from './images/user-5.jpg';
 import user6 from './images/user-6.jpg';
+import hotelReviewPhoto1 from './images/user-1.jpg';
+import hotelReviewPhoto2 from './images/user-2.jpg';
 
 // COMPONENTS
 import Header from './components/Header';
@@ -26,6 +28,24 @@ import HotelView from './components/Views/HotelView';
 import FlightView from './components/Views/FlightView';
 import CarRentalView from './components/Views/CarRentalView';
 import ToursView from './components/Views/ToursView';
+
+////// HOTEL REVIEWS
+const hotelReview1 = {
+  quote:
+    'Itaque quas, culpa rem perspiciatis obcaecati illo eligendi minima, necessitatibus architecto distinctio similique quis.',
+  photo: hotelReviewPhoto1,
+  name: 'Ethan',
+  date: 'Sept 22nd, 2019',
+  rating: 7.8,
+};
+const hotelReview2 = {
+  quote:
+    'Adipisci inventore ab distinctio itaque quia tenetur aliquid amet, autem quidem accusamus hic facilis eaque dignissimos sint!',
+  photo: hotelReviewPhoto2,
+  name: 'Stephanie',
+  date: 'Jan 24th, 2018',
+  rating: 9.1,
+};
 
 // ROUTES
 // Including their path, exact or not, and the component to display
@@ -54,9 +74,11 @@ const routes = [
         friends={[
           { name: 'Andy', photo: user3 },
           { name: 'Fernando', photo: user4 },
-          { name: 'Ethan', photo: user5 },
+          { name: 'Gerardo', photo: user5 },
           { name: 'Marilyn', photo: user6 },
         ]}
+        review1={hotelReview1}
+        review2={hotelReview2}
       />
     ),
   },
