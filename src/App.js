@@ -30,22 +30,24 @@ import CarRentalView from './components/Views/CarRentalView';
 import ToursView from './components/Views/ToursView';
 
 ////// HOTEL REVIEWS
-const hotelReview1 = {
-  quote:
-    'Itaque quas, culpa rem perspiciatis obcaecati illo eligendi minima, necessitatibus architecto distinctio similique quis.',
-  photo: hotelReviewPhoto1,
-  name: 'Ethan',
-  date: 'Sept 22nd, 2019',
-  rating: 7.8,
-};
-const hotelReview2 = {
-  quote:
-    'Adipisci inventore ab distinctio itaque quia tenetur aliquid amet, autem quidem accusamus hic facilis eaque dignissimos sint!',
-  photo: hotelReviewPhoto2,
-  name: 'Stephanie',
-  date: 'Jan 24th, 2018',
-  rating: 9.1,
-};
+const hotelReviews = [
+  {
+    quote:
+      'Itaque quas, culpa rem perspiciatis obcaecati illo eligendi minima, necessitatibus architecto distinctio similique quis.',
+    photo: hotelReviewPhoto1,
+    name: 'Ethan',
+    date: 'Sept 22nd, 2019',
+    rating: 7.8,
+  },
+  {
+    quote:
+      'Adipisci inventore ab distinctio itaque quia tenetur aliquid amet, autem quidem accusamus hic facilis eaque dignissimos sint!',
+    photo: hotelReviewPhoto2,
+    name: 'Stephanie',
+    date: 'Jan 24th, 2018',
+    rating: 9.1,
+  },
+];
 
 // ROUTES
 // Including their path, exact or not, and the component to display
@@ -77,8 +79,7 @@ const routes = [
           { name: 'Gerardo', photo: user5 },
           { name: 'Marilyn', photo: user6 },
         ]}
-        review1={hotelReview1}
-        review2={hotelReview2}
+        reviews={hotelReviews}
       />
     ),
   },

@@ -15,8 +15,7 @@ const HotelView = ({
   hotelLocation,
   benefits,
   friends,
-  review1,
-  review2,
+  reviews,
 }) => {
   const generateStars = () => {
     let rating = [];
@@ -123,13 +122,15 @@ const HotelView = ({
         </div>
 
         <div className='user-reviews'>
-          <Review
-            quote={review1.quote}
-            photo={review1.photo}
-            name={review1.name}
-            date={review1.date}
-            rating={review1.rating}
-          />
+          {reviews.map((review) => (
+            <Review
+              quote={review.quote}
+              photo={review.photo}
+              name={review.name}
+              date={review.date}
+              rating={review.rating}
+            />
+          ))}
         </div>
       </div>
     </Fragment>
