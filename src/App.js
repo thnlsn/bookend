@@ -143,5 +143,6 @@ text-transform
 flex-wrap
 CSS Masks (mask-image, mask-size)
 :last-of-type
+flex-basis
 
 */

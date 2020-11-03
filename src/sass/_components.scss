@@ -341,6 +341,25 @@
 
   &__item {
     flex: 0 0 50%; // So that each item takes 50% of the width, effectively making it 2 colums of items, since only 2 will be able to fit per row
+    margin-bottom: 1rem;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      margin-right: 0.7rem;
+
+      // Older browsers
+      //background-image: url('../images/chevron-thin-right.svg');
+      //background-size: cover;
+
+      // Newer browsers - masks
+      // Mask: defines an area where we can look through an element and see whats behind it
+      background-color: var(--color-primary);
+      mask-image: url('../images/chevron-thin-right.svg');
+      mask-size: cover;
+    }
   }
 }
 
