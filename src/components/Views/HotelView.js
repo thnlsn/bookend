@@ -113,7 +113,17 @@ const HotelView = ({
           </div>
         </div>
 
-        <div className='user-reviews'>User reviews</div>
+        <div className='user-reviews'>
+          <div className='review'>
+            {/* Figures are great for text and descriptions of images, not just images */}
+            <figure className='review'>
+              <blockquote className='review__text'>
+                Itaque quas, culpa rem perspiciatis obcaecati illo eligendi
+                minima, necessitatibus architecto distinctio similique quis.
+              </blockquote>
+            </figure>
+          </div>
+        </div>
       </div>
     </Fragment>
   );
