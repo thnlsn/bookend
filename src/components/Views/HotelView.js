@@ -120,6 +120,14 @@ const HotelView = ({
               <blockquote className='review__text'>
                 Itaque quas, culpa rem perspiciatis obcaecati illo eligendi
                 minima, necessitatibus architecto distinctio similique quis.
+                <figcaption className='review__user'>
+                  <img src='' alt='' className='review__photo' />
+                  <div className='review__user-box'>
+                    <p className='user__name'>fdkjhfdj</p>
+                    <p className='review__user-date'>fdsiujhifd</p>
+                  </div>
+                  <div className='review__rating'>7.8dfsafads</div>
+                </figcaption>
               </blockquote>
             </figure>
           </div>
