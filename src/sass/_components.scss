@@ -396,3 +396,39 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // REVIEW //////////////////////////////////////////////////////////////////////////////////////////////////
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    margin-bottom: 2rem;
+  }
+  &__user {
+    display: flex;
+  }
+  &__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+  }
+  &__user-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__user-name {
+    text-transform: uppercase;
+  }
+  &__user-date {
+    color: var(--color-grey-dark-3);
+    font-weight: 300;
+  }
+  &__rating {
+    margin-left: auto;
+  }
+}

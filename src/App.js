@@ -35,7 +35,7 @@ const hotelReviews = [
     quote:
       'Itaque quas, culpa rem perspiciatis obcaecati illo eligendi minima, necessitatibus architecto distinctio similique quis.',
     photo: hotelReviewPhoto1,
-    name: 'Ethan',
+    name: 'Darek Adelsen',
     date: 'Sept 22nd, 2019',
     rating: 7.8,
   },
@@ -43,7 +43,7 @@ const hotelReviews = [
     quote:
       'Adipisci inventore ab distinctio itaque quia tenetur aliquid amet, autem quidem accusamus hic facilis eaque dignissimos sint!',
     photo: hotelReviewPhoto2,
-    name: 'Stephanie',
+    name: 'Szófia Katona',
     date: 'Jan 24th, 2018',
     rating: 9.1,
   },
@@ -168,4 +168,9 @@ CSS Masks (mask-image, mask-size)
 :last-of-type
 flex-basis
 
+
+
+
+
+if else in JSX? Why doesn't it work?
 */

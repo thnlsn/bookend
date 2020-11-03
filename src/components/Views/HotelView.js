@@ -37,14 +37,6 @@ const HotelView = ({
     return rating;
   };
 
-  const multipleFriends = () => {
-    if (friends.length < 1) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
   return (
     <Fragment>
       {/* IMAGE GALLERY */}
@@ -94,8 +86,10 @@ const HotelView = ({
             tenetur expedita non fuga illum!
           </p>
           <ul className='list'>
-            {benefits.map((benefit) => (
-              <li className='list__item'>{benefit}</li>
+            {benefits.map((benefit, index) => (
+              <li className='list__item' key={index}>
+                {benefit}
+              </li>
             ))}
           </ul>
           <div className='recommend'>
@@ -113,25 +107,27 @@ const HotelView = ({
               {friends.map((friend, index) => (
                 <img
                   src={friend.photo}
-                  alt='Friend photo'
+                  alt='Friend'
                   className='recommend__photo'
+                  key={index}
                 />
               ))}
             </div>
           </div>
         </div>
 
-        <div className='user-reviews'>
-          {reviews.map((review) => (
+        <figure className='user-reviews'>
+          {reviews.map((review, index) => (
             <Review
               quote={review.quote}
               photo={review.photo}
               name={review.name}
               date={review.date}
               rating={review.rating}
+              key={index}
             />
           ))}
-        </div>
+        </figure>
       </div>
     </Fragment>
   );

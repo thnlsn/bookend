@@ -84,7 +84,6 @@ body {
   flex: 0 0 60%; }
 
 .user-reviews {
-  background-color: #fff;
   flex: 1; }
 
 .logo {
@@ -316,3 +315,30 @@ body {
     border: 0.3rem solid #fff; }
     .recommend__photo:not(:last-child) {
       margin-right: -1.5rem; }
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column; }
+  .review__text {
+    margin-bottom: 2rem; }
+  .review__user {
+    display: flex; }
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%; }
+  .review__user-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .review__user-name {
+    text-transform: uppercase; }
+  .review__user-date {
+    color: var(--color-grey-dark-3);
+    font-weight: 300; }
+  .review__rating {
+    margin-left: auto; }
