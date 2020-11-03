@@ -418,22 +418,25 @@
     border-radius: 50%;
   }
   &__user-box {
-    margin: 0 auto 0 2rem;
+    margin: 0 auto 0 1.5rem;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
   &__user-name {
-    font-weight: 400;
+    font-size: 1.1rem;
+    font-weight: 600;
     text-transform: uppercase;
+    margin-bottom: 0.4rem;
   }
   &__user-date {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--color-grey-dark-3);
   }
   &__rating {
     font-size: 2rem;
     color: var(--color-primary);
+    /* FONT WEIGHT? */
   }
 }
