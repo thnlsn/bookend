@@ -373,3 +373,7 @@ body {
     color: var(--color-grey-light-2);
     font-family: sans-serif;
     z-index: 10; }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center; }

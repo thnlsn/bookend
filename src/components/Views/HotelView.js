@@ -137,7 +137,7 @@ const HotelView = ({
         <h2 className='cta__book-now'>
           Good news! We have 4 rooms for your selected dates!
         </h2>
-        <button className='btn'>Book Now</button>
+        <button className='btn'>Only 4 rooms left</button>
       </div>
     </Fragment>
   );
