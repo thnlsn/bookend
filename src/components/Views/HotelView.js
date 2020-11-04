@@ -127,11 +127,11 @@ const HotelView = ({
               key={index}
             />
           ))}
+          <button className='btn-inline'>
+            Show all <span>&rarr;</span>
+          </button>
         </figure>
       </div>
-      <button className='btn-inline'>
-        Show all <span>&rarr;</span>
-      </button>
     </Fragment>
   );
 };
