@@ -301,10 +301,21 @@
 
   transition: all 0.2s;
 
+  // For a span that is inside this block
+  & span {
+    transition: margin-left 0.4s; // Targetting margin-left because otherwise the other animation would lag on the span
+    margin-left: 3px;
+  }
+
   &:hover {
     color: var(
       --color-grey-dark-1
     ); // The border will change color as well since we used currentColor
+
+    // The span on hover
+    span {
+      margin-left: 8px;
+    }
   }
 
   &:focus {
