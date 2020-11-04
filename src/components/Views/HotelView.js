@@ -129,6 +129,9 @@ const HotelView = ({
           ))}
         </figure>
       </div>
+      <button className='btn-inline'>
+        Show all <span>&rarr;</span>
+      </button>
     </Fragment>
   );
 };

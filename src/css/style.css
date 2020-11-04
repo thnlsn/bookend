@@ -323,10 +323,14 @@ body {
   box-shadow: var(--shadow-light);
   padding: 3rem;
   margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column; }
   .review__text {
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    z-index: 100;
+    position: relative; }
   .review__user {
     display: flex;
     align-items: center; }
@@ -351,3 +355,13 @@ body {
     font-size: 2rem;
     color: var(--color-primary);
     /* FONT WEIGHT? */ }
+  .review::before {
+    content: '\201c';
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    line-height: 1;
+    font-size: 20rem;
+    color: var(--color-grey-light-2);
+    font-family: sans-serif;
+    z-index: 10; }
