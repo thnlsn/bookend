@@ -476,8 +476,16 @@
   text-align: center;
 
   &__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
   }
+}
 
-  &__btn {
-  }
+.btn {
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light, var(--color-primary-dark))
+  );
 }
