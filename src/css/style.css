@@ -384,4 +384,9 @@ body {
     margin-bottom: 2.5rem; }
 
 .btn {
-  background-image: linear-gradient(to bottom, var(--color-primary-light, var(--color-primary-dark))); }
+  background-image: linear-gradient(to bottom, var(--color-primary-light, var(--color-primary-dark)));
+  position: relative; }
+  .btn__visible {
+    padding: 2rem 7.5rem; }
+  .btn__invisible {
+    padding: 2rem 7.5rem; }

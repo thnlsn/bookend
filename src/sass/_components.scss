@@ -488,10 +488,13 @@
     to bottom,
     var(--color-primary-light, var(--color-primary-dark))
   );
+  position: relative;
 
   &__visible {
+    padding: 2rem 7.5rem;
   }
 
   &__invisible {
+    padding: 2rem 7.5rem;
   }
 }
