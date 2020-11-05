@@ -488,4 +488,10 @@
     to bottom,
     var(--color-primary-light, var(--color-primary-dark))
   );
+
+  &__visible {
+  }
+
+  &__invisible {
+  }
 }
