@@ -391,6 +391,7 @@ body {
   border: none;
   background-image: linear-gradient(to bottom, var(--color-primary-light), var(--color-primary-dark));
   color: #fff;
+  overflow: hidden;
   position: relative; }
   .btn__visible {
     display: inline-block;
