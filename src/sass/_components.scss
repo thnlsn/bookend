@@ -489,11 +489,13 @@
   text-transform: uppercase;
   border-radius: 100px;
   border: none;
+
   background-image: linear-gradient(
     to bottom,
     var(--color-primary-light),
     var(--color-primary-dark)
   );
+
   color: #fff;
   overflow: hidden; // To hide the invisible span element
 
@@ -512,6 +514,16 @@
 
     position: absolute;
     left: 0;
-    top: -100%;
+    top: -100%; // Right above the visible button span
+
+    transition: all 0.3s;
+  }
+
+  &:hover &__visible {
+    top: 100%;
+  }
+
+  &:hover &__invisible {
+    top: 0;
   }
 }

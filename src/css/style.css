@@ -403,4 +403,9 @@ body {
     width: 100%;
     position: absolute;
     left: 0;
-    top: -100%; }
+    top: -100%;
+    transition: all 0.3s; }
+  .btn:hover .btn__visible {
+    top: 100%; }
+  .btn:hover .btn__invisible {
+    top: 0; }
