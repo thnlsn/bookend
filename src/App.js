@@ -80,6 +80,7 @@ const routes = [
           { name: 'Marilyn', photo: user6 },
         ]}
         reviews={hotelReviews}
+        availabilities={2}
       />
     ),
   },

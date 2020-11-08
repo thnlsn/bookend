@@ -16,6 +16,7 @@ const HotelView = ({
   benefits,
   friends,
   reviews,
+  availabilities,
 }) => {
   const generateStars = () => {
     let rating = [];
@@ -134,12 +135,26 @@ const HotelView = ({
       </div>
 
       <div className='cta'>
-        <h2 className='cta__book-now'>
-          Good news! We have 4 rooms for your selected dates!
-        </h2>
+        {availabilities > 0 ? (
+          <h2 className='cta__book-now'>
+            Good news! We have {availabilities} room
+            {availabilities != 1 && <span>s</span>} for your selected dates!
+          </h2>
+        ) : (
+          <h2 className='cta__book-now'>
+            Sorry, we have no availabilities at this time.
+          </h2>
+        )}
         <button className='btn'>
           <span className='btn__visible'>Book now</span>
-          <span className='btn__invisible'>Only 4 rooms left</span>
+          {availabilities > 0 ? (
+            <span className='btn__invisible'>
+              Only {availabilities} room
+              {availabilities != 1 && <span>s</span>} left
+            </span>
+          ) : (
+            <span className='btn__invisible'>No more rooms left</span>
+          )}
         </button>
       </div>
     </Fragment>
