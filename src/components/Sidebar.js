@@ -3,7 +3,7 @@ import React from 'react';
 // COMPONENTS
 import Item from './Sidebar/SidebarLink';
 
-const Sidebar = ({ icons, titles, hrefs }) => {
+const Sidebar = ({ icons, titles, hrefs, currentTab, func }) => {
   return (
     <nav className='sidebar'>
       <ul className='side-nav'>
@@ -13,6 +13,8 @@ const Sidebar = ({ icons, titles, hrefs }) => {
             icon={icons[index]}
             href={hrefs[index]}
             key={index}
+            currentTab={currentTab}
+            func={func}
           />
         ))}
       </ul>

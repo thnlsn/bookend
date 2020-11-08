@@ -48,6 +48,9 @@
     border: none;
     background-color: transparent;
 
+    transition: transform 0.1s;
+    transform: translateY(1px);
+
     &:focus {
       outline: none;
     }
@@ -169,6 +172,10 @@
       // Ending animation state
       transform: scaleY(1);
       width: 100%;
+    }
+
+    &--active {
+      background-color: var(--color-primary);
     }
   }
 
@@ -299,7 +306,7 @@
   background-color: transparent; // This is because we want to use this inline, so it shouldnt have a fixed color, so it can be used anywhere (modular & reusable)
   cursor: pointer;
 
-  transition: all 0.2s;
+  transition: all 0.1s;
 
   // For a span that is inside this block
   & span {
@@ -323,7 +330,7 @@
   }
 
   &:active {
-    transform: scale(0.97); // Shrink a tiny amount when clicked
+    transform: scale(0.98); // Shrink a tiny amount when clicked
   }
 }
 
@@ -509,7 +516,7 @@
 
   position: relative;
 
-  transition: transform 0.2s;
+  transition: transform 0.1s;
 
   // These should happen to both the visible and invisible span elements
   & > * {
