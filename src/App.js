@@ -104,7 +104,7 @@ const routes = [
 // APP
 function App() {
   // STATE
-  const [currentTab, setCurrentTab] = useState('hotels');
+  const [currentTab, setCurrentTab] = useState('');
   const [username /* setUsername */] = useState('Thomas');
   const [bookmarks /* setBookmarks */] = useState(11);
   const [chats /* setChats */] = useState(3);
@@ -123,7 +123,7 @@ function App() {
         chats={chats}
         userImage={userImage}
         username={username}
-        currentPage={currentTab.slice(1)}
+        currentPage={window.location.pathname.split('/')[1]}
       />
       <div className='content'>
         <Router>
@@ -137,7 +137,6 @@ function App() {
             ]}
             titles={['Hotel', 'Flight', 'Car Rental', 'Tours']}
             hrefs={['/hotels', '/flights', '/cars', '/tours']}
-            currentTab={currentTab}
             func={handleTabClick}
           />
           <main className='main-view'>
