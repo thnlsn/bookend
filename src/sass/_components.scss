@@ -174,8 +174,9 @@
       width: 100%;
     }
 
-    &--active {
-      background-color: var(--color-primary);
+    &--active::before {
+      transform: scaleY(1);
+      width: 100%;
     }
   }
 

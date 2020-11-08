@@ -110,7 +110,7 @@ function App() {
   const [chats /* setChats */] = useState(3);
 
   const handleTabClick = () => {
-    // Take the event
+    // Look at what the url says after it has been clicked, and the tab will apply the style of being active accordingly
     setCurrentTab(window.location.pathname.split('/')[1]);
   };
 

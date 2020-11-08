@@ -13,7 +13,7 @@ const Sidebar = ({ icons, titles, hrefs, func }) => {
             icon={icons[index]}
             href={hrefs[index]}
             key={index}
-            func={func}
+            func={func} // To let the item call the function to set the currentTab
           />
         ))}
       </ul>
