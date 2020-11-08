@@ -138,7 +138,7 @@ const HotelView = ({
         {availabilities > 0 ? (
           <h2 className='cta__book-now'>
             Good news! We have {availabilities} room
-            {availabilities != 1 && <span>s</span>} for your selected dates!
+            {availabilities !== 1 && <span>s</span>} for your selected dates!
           </h2>
         ) : (
           <h2 className='cta__book-now'>
@@ -150,7 +150,7 @@ const HotelView = ({
           {availabilities > 0 ? (
             <span className='btn__invisible'>
               Only {availabilities} room
-              {availabilities != 1 && <span>s</span>} left
+              {availabilities !== 1 && <span>s</span>} left
             </span>
           ) : (
             <span className='btn__invisible'>No more rooms left</span>
