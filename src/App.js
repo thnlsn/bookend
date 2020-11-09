@@ -198,6 +198,7 @@ CSS Masks (mask-image, mask-size)
 flex-basis
 When to utilize inheritance (parent elements etc.)
 ::before & :after? When and why? (not in css just in html)
+lexical order of media queries?
 
 
 

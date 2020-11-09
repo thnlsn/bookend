@@ -71,6 +71,10 @@
   @media only screen and (max-width: $bp-medium) {
     padding: 3rem;
   }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -86,6 +90,11 @@
     margin-right: 3rem; // Should be same as detail padding to be more uniform
   }
 
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+    margin-right: 0;
+  }
+
   flex: 0 0 60%; // Usually if the flex basis is a percentage, the grow and shrink will be 0, because if you want a specific size, you dont want it to grow or shrink
 }
 
@@ -95,4 +104,10 @@
   align-items: center; // Remember this defaults to stretch
 
   flex: 1; // Grow
+
+  @media only screen and (max-width: $bp-small) {
+    & > *:first-child {
+      margin-top: 3rem;
+    }
+  }
 }

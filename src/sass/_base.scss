@@ -21,9 +21,12 @@
 }
 
 // CSS variables dont work for media query conditions, so we use Sass variables
-$bp-largest: 75em; // 1200px
-$bp-large: 68.75em; // 1100px
-$bp-medium: 56.25em; // 900px
+// ----------------------- (x / 16) where x = desired breakpoint in px
+$bp-largest: 75em; // ---- 1200px
+$bp-large: 68.75em; // --- 1100px
+$bp-medium: 56.25em; // -- 900px
+$bp-small: 37.5em; // ---- 600px
+$bp-smallest: 31.25em; // ---- 600px
 
 html {
   box-sizing: border-box;

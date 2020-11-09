@@ -94,6 +94,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .detail {
       padding: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   font-size: 1.4rem;
@@ -106,12 +109,19 @@ body {
     .description {
       padding: 2rem;
       margin-right: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      flex-direction: column;
+      margin-right: 0; } }
 
 .user-reviews {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1; }
+  @media only screen and (max-width: 37.5em) {
+    .user-reviews > *:first-child {
+      margin-top: 3rem; } }
 
 .logo {
   height: 3.25rem;
@@ -247,11 +257,21 @@ body {
       .side-nav__link:link, .side-nav__link:visited {
         justify-content: center;
         padding: 2rem 0; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column;
+        padding: 1.5rem; } }
   .side-nav__icon {
-    height: 1.75rem;
     width: 1.75rem;
+    height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__icon {
+        margin-right: 0;
+        margin-bottom: 0.7rem;
+        width: 1.5rem;
+        height: 1.5rem; } }
 
 .legal-text {
   font-size: 1.2rem;
@@ -278,6 +298,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__heading {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
@@ -305,13 +329,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating {
+        padding: 0rem 1.5rem; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating-average {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem; } }
   .overview__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase;
     margin-top: -5px; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating-count {
+        font-size: 0.5rem; } }
 
 .btn-inline {
   border: none;
@@ -391,6 +425,9 @@ body {
     .review {
       padding: 2rem;
       margin-bottom: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .review {
+      width: 80%; } }
   .review__text {
     margin-bottom: 2rem;
     z-index: 100;
