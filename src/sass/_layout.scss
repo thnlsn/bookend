@@ -30,6 +30,10 @@
 
 .content {
   display: flex; // This is now a flex container
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
 } // Children: .sidebar, .hotel-view
 
 .sidebar {
@@ -39,6 +43,10 @@
   display: flex;
   flex-direction: column; // Because the sidebar should be a column rather than the default row
   justify-content: space-between; // So the legal text is pushed to the bottom
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: row;
+  }
 }
 
 .main-view {

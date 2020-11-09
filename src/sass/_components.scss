@@ -146,12 +146,20 @@
   list-style: none; // Remove the bullet points that come with links
   margin-top: 3.5rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    margin: 0;
+    display: flex;
+  }
+
   // ### The container for the link and icon
   &__item {
     position: relative; // For the absolute positioning of the ::before red hover animation
 
-    &:not(:last-child) {
-      margin-bottom: 0.5rem;
+    // On a screen GREATER than 900px, apply a margin to each side-nav__item minus the last one
+    @media only screen and (min-width: $bp-medium) {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
     }
 
     &::before {
@@ -214,6 +222,10 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -408,7 +420,7 @@
     border: 0.3rem solid #fff;
 
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }
