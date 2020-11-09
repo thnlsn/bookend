@@ -20,9 +20,19 @@
   --line: 1px solid var(--color-grey-light-2);
 }
 
+// CSS variables dont work for media query conditions, so we use Sass variables
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px, 10px / 16px = 62.5%
+
+  // Only for screens (not voice or printing etc.)
+  @media only screen and (max-width: $bp-large) {
+    // Completely remove the red background and have the content take up the whole page
+    font-size: 50%;
+  }
 }
 
 * {

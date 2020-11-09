@@ -3,6 +3,14 @@
   margin: 8rem auto;
   background-color: var(--color-grey-light-1);
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+
+  @media only screen and (max-width: $bp-largest) {
+    // Completely remove the red background and have the content take up the whole page
+    margin: 0;
+    // Make sure that the content fills the whole page because above, we declared the max-width of 120rem, which might change when we change the html {font-size}, since rem will be smaller
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .header {
