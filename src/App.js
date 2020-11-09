@@ -103,15 +103,36 @@ const routes = [
 
 // APP
 function App() {
+  // This has to come first because it is used in the generation of the initial currentTab state
+  const checkIfTabExists = () => {
+    // Save the current path in the url, but only the part after the first / and before the second /
+    const currentPath = window.location.pathname.split('/')[1];
+    for (let i = 0; i < routes.length; i++) {
+      // If we have a primary route that is equal to the above variable, return true and currentTab will be set to whatever that route is (top be displayed in the searchbar)
+      if (routes[i].path.split('/')[1] === currentPath) {
+        return true;
+        // We only compare the value within the /'s because we want the search placeholder value to remain if we move into a secondary url path, like /hotels/hilton, in which case it will still say "Search hotels"
+      }
+    }
+    // Else return an empty string so that the searchbar will just say "Search" instead of "Search hotels" or "Search flights" etc.
+    return '';
+  };
+
   // STATE
-  const [currentTab, setCurrentTab] = useState('');
+  const [searchValue, setSearchValue] = useState(
+    // First check if what is currently in the url before and after the initial /'s is an actual primary route (checkIfTabExists does this, since tabs determine primary routes in this app)
+    // Then, if it does, it will return true and move to the second part after the &&, which will simply set currentTab state to whatever that string between the /'s was
+    // This prevents any strange url's, either input by user or by some glitch, from being the Tab state value
+    checkIfTabExists() && window.location.pathname.split('/')[1]
+  );
   const [username /* setUsername */] = useState('Thomas');
   const [bookmarks /* setBookmarks */] = useState(11);
   const [chats /* setChats */] = useState(3);
 
   const handleTabClick = () => {
     // Look at what the url says after it has been clicked, and the tab will apply the style of being active accordingly
-    setCurrentTab(window.location.pathname.split('/')[1]);
+    /* if () */
+    setSearchValue(window.location.pathname.split('/')[1]);
   };
 
   return (
@@ -123,7 +144,7 @@ function App() {
         chats={chats}
         userImage={userImage}
         username={username}
-        currentPage={window.location.pathname.split('/')[1]}
+        currentPage={searchValue}
       />
       <div className='content'>
         <Router>

@@ -13,7 +13,7 @@ const SidebarLink = ({ icon, title, href, func }) => {
           ? 'side-nav__item--active'
           : ''
       }`}
-      // Simple function to set the currentTab to whatever the url path says
+      // Simple function to set the current search placeholder value to whatever the url path says
       onClick={func}
     >
       <Link to={`${href}`} className='side-nav__link'>
