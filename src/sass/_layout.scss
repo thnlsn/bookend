@@ -66,6 +66,11 @@
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line);
+
+  // Lessen the outer padding of the content area
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
 }
 
 .description {
@@ -74,6 +79,12 @@
   box-shadow: var(--shadow-light);
   padding: 3rem;
   margin-right: 4.5rem;
+
+  // Lessen the margin to the right of the desc that spaces it from the reviews to the same as the out padding
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-right: 3rem; // Should be same as detail padding to be more uniform
+  }
 
   flex: 0 0 60%; // Usually if the flex basis is a percentage, the grow and shrink will be 0, because if you want a specific size, you dont want it to grow or shrink
 }
