@@ -147,14 +147,16 @@
 
   @media only screen and (max-width: $bp-medium) {
     margin: 0;
+
     display: flex;
-    justify-content: center;
+    // So the container of nav items can take up the entire width of the content when it becomes a top navbar
     flex: 1;
   }
 
   // ### The container for the link and icon
   &__item {
     position: relative; // For the absolute positioning of the ::before red hover animation
+    cursor: pointer;
 
     @media only screen and (max-width: $bp-medium) {
       flex: 1;
@@ -179,17 +181,29 @@
       transition: transform 0.2s, width 0.45s cubic-bezier(1, -0.02, 0, 1);
       width: 3px;
       transform: scaleY(0);
+
+      // ANIMATION FOR TABLET
+      @media only screen and (max-width: $bp-medium) {
+        width: 100%;
+
+        transition: transform 0.2s, height 0.45s cubic-bezier(1, -0.02, 0, 1);
+        height: 3px;
+        transform: scaleX(0);
+      }
     }
 
-    &:hover::before {
+    // Ending animation state for a hovered nav item, but also for one that is --active, meaning it has been clicked and these styles will apply until another is clicked
+    &:hover::before,
+    &--active::before {
       // Ending animation state
       transform: scaleY(1);
       width: 100%;
-    }
 
-    &--active::before {
-      transform: scaleY(1);
-      width: 100%;
+      // ENDING ANIMATION STATE FOR TABLET
+      @media only screen and (max-width: $bp-medium) {
+        transform: scaleX(1);
+        height: 100%;
+      }
     }
   }
 
@@ -208,6 +222,11 @@
 
     position: relative;
     z-index: 100;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+      padding: 2rem 0;
+    }
   }
 
   // ### The SVG icon
