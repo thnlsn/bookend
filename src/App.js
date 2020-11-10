@@ -176,4 +176,11 @@ function App() {
   );
 }
 
+// THINGS TO FIX IN THE FUTURE (besides building the flights, car rentals, and tours pages)
+/* 
+
+- Fix iPad Pro portrait viewport
+
+*/
+
 export default App;
