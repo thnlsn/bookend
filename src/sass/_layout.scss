@@ -13,8 +13,9 @@
   }
 }
 
+// The container of the logo, search, chat/bookmarks, and user image + name
 .header {
-  // Inherits
+  // All header children will inherit this
   font-size: 1.4rem;
 
   // Base styles
@@ -26,6 +27,13 @@
   display: flex; // This will automatically set all the header children side by side
   justify-content: space-between; // Maximize the space between each item
   align-items: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    height: 11rem;
+
+    align-content: space-around;
+    flex-wrap: wrap; // Wrap if no space in flex container
+  }
 }
 
 .content {

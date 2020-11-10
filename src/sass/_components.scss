@@ -15,6 +15,13 @@
   /*   align-items: center; */
   justify-content: center;
 
+  @media only screen and (max-width: $bp-smallest) {
+    background-color: var(--color-grey-light-2);
+
+    order: 1; // Since the rest have the default 'order: 0', it will be placed at the end with a value of 1 (like z-index)
+    flex: 0 0 100%; // 100% basis so that it will forcefully take a full row
+  }
+
   // ### ELEMENT: the searchbar input
   &__input {
     font-family: inherit; // Remember, inputs do not inherit the global font declarations
@@ -29,6 +36,10 @@
     // Default styles to be animated
     transition: all 0.2s;
     width: 90%; // Initial state -- only 90% because we want to animate it widening when focused
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin-right: -3.5rem; // So that the button will be on top of the searchbar
+    }
 
     &:focus {
       outline: none;
@@ -282,6 +293,10 @@
   display: flex;
   align-items: center;
 
+  @media only screen and (max-width: $bp-smallest) {
+    justify-content: space-between; // Because I set the basis of the header to 50%, which makes the items not take all the space, so space-between will force the last item to at least go to the end
+  }
+
   &__heading {
     font-size: 2.25rem;
     font-weight: 300;
@@ -289,9 +304,8 @@
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
 
-    @media only screen and (max-width: $bp-small) {
-      font-size: 1.8rem;
-      padding: 1.25rem 2rem; // padding around only the hotel name
+    @media only screen and (max-width: $bp-smallest) {
+      flex: 0 0 65%; // Take slightly less space so the inline button can fit without squishing into 2 lines
     }
   }
 
@@ -299,6 +313,10 @@
     margin-right: auto; // This is a good flexbox trick to essentially push an item all the way to another side
     // This is more to fix the styling of the SVG star icons, rather than actually needing them to be flex items
     display: flex; // The icons in the overview__stars are now flex items and will lose the inline styles that come wiht SVGs (such as line height similar to text and other inline elements)
+
+    @media only screen and (max-width: $bp-smallest) {
+      display: none;
+    }
   }
 
   &__icon-star,
@@ -317,6 +335,10 @@
     font-size: 1.2rem;
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+      flex: 0 0 0%;
+    }
   }
 
   &__icon-location {
@@ -337,6 +359,7 @@
 
     @media only screen and (max-width: $bp-small) {
       padding: 0rem 1.5rem; // padding left/right of the rating
+      margin-left: 2rem;
     }
   }
 
