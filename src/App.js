@@ -177,34 +177,3 @@ function App() {
 }
 
 export default App;
-
-/* 
-SVGs
-symbol-defs
->
-*
-~
-currentColor
-fill
-z-index (and how it only works with position)
-transition-origin (change where an animation begins)
-display: block; on img elements specifically
-margin-right/left: auto (specifically on flex items)
-infinite
-text-transform
-flex-wrap
-CSS Masks (mask-image, mask-size)
-:last-of-type
-flex-basis
-When to utilize inheritance (parent elements etc.)
-::before & :after? When and why? (not in css just in html)
-lexical order of media queries?
-order: 0 (how it works like z-index)
-content: '' (in :before/:after)
-
-
-
-
-
-if else in JSX? Why doesn't it work?
-*/
