@@ -16,10 +16,19 @@
   justify-content: center;
 
   @media only screen and (max-width: $bp-smallest) {
-    background-color: var(--color-grey-light-2);
+    transition: background-color 0.1s; // Since we have the entire background colored for the searchbar, we need it to darken at the same speed like the original searchbar
+    background-color: var(
+      --color-grey-light-2
+    ); // Initial color state of the background
 
     order: 1; // Since the rest have the default 'order: 0', it will be placed at the end with a value of 1 (like z-index)
     flex: 0 0 100%; // 100% basis so that it will forcefully take a full row
+
+    &:focus-within {
+      background-color: var(
+        --color-grey-light-3
+      ); // When the search child element is focuses, apply this to the search container
+    }
   }
 
   // ### ELEMENT: the searchbar input

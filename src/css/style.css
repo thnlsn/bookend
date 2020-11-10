@@ -139,9 +139,12 @@ body {
   justify-content: center; }
   @media only screen and (max-width: 31.25em) {
     .search {
+      transition: background-color 0.1s;
       background-color: var(--color-grey-light-2);
       order: 1;
-      flex: 0 0 100%; } }
+      flex: 0 0 100%; }
+      .search:focus-within {
+        background-color: var(--color-grey-light-3); } }
   .search__input {
     font-family: inherit;
     font-size: inherit;

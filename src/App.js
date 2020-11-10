@@ -200,6 +200,7 @@ When to utilize inheritance (parent elements etc.)
 ::before & :after? When and why? (not in css just in html)
 lexical order of media queries?
 order: 0 (how it works like z-index)
+content: '' (in :before/:after)
 
 
 
