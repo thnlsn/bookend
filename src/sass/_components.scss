@@ -459,14 +459,19 @@
       margin-right: 0.7rem;
 
       // Older browsers
-      //background-image: url('../images/chevron-thin-right.svg');
-      //background-size: cover;
+      background-image: url('../images/chevron-thin-right.svg');
+      background-size: cover;
 
       // Newer browsers - masks
       // Mask: defines an area where we can look through an element and see whats behind it
-      background-color: var(--color-primary);
-      mask-image: url('../images/chevron-thin-right.svg');
-      mask-size: cover;
+      @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+        background-color: var(--color-primary);
+        -webkit-mask-image: url('../images/chevron-thin-right.svg');
+        -webkit-mask-size: cover;
+        mask-image: url('../images/chevron-thin-right.svg');
+        mask-size: cover;
+        background-image: none; // Since we support masks, everything works, however the background image that we want to mask around is still there for old browsers, so we remove it for new ones that do support masks
+      }
     }
   }
 }
