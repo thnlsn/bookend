@@ -72,11 +72,15 @@
   outline: none;
   cursor: pointer;
 
-  &:active::before {
-    transform: translateX(calc(100% + 2rem));
+  &__radio {
+    display: none;
   }
 
-  &--left::before {
+  /*   &:active::before {
+    transform: translateX(calc(100% + 2rem));
+  } */
+
+  /*   &--left::before {
     content: '';
     position: absolute;
     top: 0;
@@ -86,14 +90,27 @@
     background-image: linear-gradient(
       45deg,
       var(--color-primary),
-      var(--color-primary-light)
+      var(--color-primary)
     );
     border-radius: 100px;
     height: 100%;
     width: 100%;
-  }
+  } */
 
-  &__radio {
-    display: none;
+  &__radio:checked + &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; // Must be negative (research this later)
+
+    background-image: linear-gradient(
+      45deg,
+      var(--color-primary),
+      var(--color-primary)
+    );
+    border-radius: 100px;
+    height: 100%;
+    width: 100%;
   }
 }

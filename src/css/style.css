@@ -175,21 +175,38 @@ body {
   position: relative;
   z-index: 1;
   outline: none;
-  cursor: pointer; }
-  .switch-button:active::before {
-    transform: translateX(calc(100% + 2rem)); }
-  .switch-button--left::before {
+  cursor: pointer;
+  /*   &:active::before {
+    transform: translateX(calc(100% + 2rem));
+  } */
+  /*   &--left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; // Must be negative (research this later)
+
+    background-image: linear-gradient(
+      45deg,
+      var(--color-primary),
+      var(--color-primary)
+    );
+    border-radius: 100px;
+    height: 100%;
+    width: 100%;
+  } */ }
+  .switch-button__radio {
+    display: none; }
+  .switch-button__radio:checked + .switch-button:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    background-image: linear-gradient(45deg, var(--color-primary), var(--color-primary-light));
+    background-image: linear-gradient(45deg, var(--color-primary), var(--color-primary));
     border-radius: 100px;
     height: 100%;
     width: 100%; }
-  .switch-button__radio {
-    display: none; }
 
 .logo {
   height: 3.25rem;
