@@ -179,7 +179,7 @@ body {
 
 .switch-input {
   display: flex;
-  justify-content: space-evenly; }
+  justify-content: center; }
   .switch-input__button {
     border: none;
     text-align: center;
@@ -209,7 +209,7 @@ body {
   .switch-input__radio:checked + .switch-input__button {
     color: var(--color-grey-light-1); }
   .switch-input__radio:checked + .switch-input__button::before {
-    background-color: blueviolet;
+    background-color: var(--color-primary);
     transform: translateX(0); }
 
 .logo {

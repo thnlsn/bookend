@@ -34,10 +34,6 @@
     }
   }
 
-  // Code
-  &__iata {
-  }
-
   // City
   &__location {
     font-size: 1.8rem;
@@ -56,7 +52,7 @@
 // TRIP TYPE BUTTON ////////////////////////////////////////////////////////////////////////////////////////
 .switch-input {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 
   // All buttons
   &__button {
@@ -107,7 +103,7 @@
   }
   // When the radio is checked, target the ::before of the button
   &__radio:checked + &__button::before {
-    background-color: blueviolet;
+    background-color: var(--color-primary);
     transform: translateX(0);
   }
 }
