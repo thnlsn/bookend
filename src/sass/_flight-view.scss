@@ -1,0 +1,95 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// FLIGHT OVERVIEW //////////////////////////////////////////////////////////////////////////////////////////////////
+.flight {
+  font-size: 10rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1;
+  color: var(--color-primary-dark);
+  /*   background-color: var(--color-grey-light-2); */
+  padding: 2.5rem 0 3rem 0;
+  border-bottom: var(--line);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  // Container for the Code and City
+  &__airport {
+    cursor: pointer;
+
+    transition: color 0.12s;
+
+    &:hover {
+      color: var(--color-grey-dark-3);
+    }
+
+    &:hover > .flight__location {
+      opacity: 0.3;
+    }
+
+    &:active > .flight__location {
+      opacity: 0;
+    }
+  }
+
+  // Code
+  &__iata {
+  }
+
+  // City
+  &__location {
+    font-size: 1.8rem;
+
+    transition: opacity 0.15s;
+  }
+
+  // Arrow
+  & span {
+    color: var(--color-primary-dark);
+    margin-top: -2rem; // Centers the arrow a little better
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// TRIP TYPE BUTTON ////////////////////////////////////////////////////////////////////////////////////////
+.switch-button {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: var(--color-grey-light-1);
+  border: none;
+
+  border-radius: 100px;
+  background-color: transparent;
+
+  margin: 0 1rem;
+  padding: 1.8rem 6rem;
+
+  position: relative;
+  z-index: 1; // Enough to be above the background
+
+  outline: none;
+  cursor: pointer;
+
+  &span {
+    position: relative;
+    z-index: 200;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; // Must be negative (research this later)
+
+    background-image: linear-gradient(
+      45deg,
+      var(--color-primary),
+      var(--color-primary-light)
+    );
+    border-radius: 100px;
+    height: 100%;
+    width: 100%;
+  }
+}

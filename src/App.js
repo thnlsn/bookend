@@ -87,7 +87,13 @@ const routes = [
   {
     path: '/flights',
     exact: true,
-    main: () => <FlightView />,
+    main: () => (
+      <FlightView
+        origin={['SFO', 'San Francisco']}
+        destination={['LAS', 'Las Vegas']}
+        roundTrip={false}
+      />
+    ),
   },
   {
     path: '/cars',
