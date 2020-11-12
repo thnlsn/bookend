@@ -72,31 +72,63 @@
 
     outline: none;
     cursor: pointer;
+
+    // Initial animation state
+    transition: all 0.5s ease 0.015s;
+    transform-origin: center;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      border-radius: 100px;
+      height: 100%;
+      width: 100%;
+
+      // Initial animation state
+      transition: transform 0.4s cubic-bezier(0.55, 0.33, 0, 0.99) 0.05s;
+    }
+
+    &::before {
+      z-index: -1; // Must be negative (research this later)
+    }
+
+    &::after {
+      background-color: var(--color-grey-light-1);
+      z-index: -100;
+    }
+
+    &--left::before {
+      // Initial
+      transform: translateX(calc(100% + 2rem));
+    }
+    &--right::before {
+      transform: translateX(calc(-100% - 2rem));
+    }
   }
 
   &__radio {
     display: none;
   }
 
+  // When the radio is checked, target the associated button
   &__radio:checked + &__button {
     color: var(--color-grey-light-1);
-    background-color: var(--color-grey-light-3);
+  }
+  // When the radio is checked, target the ::before of the button
+  &__radio:checked + &__button::before {
+    background-color: var(--color-primary);
+    transform: translateX(0);
   }
 
-  &__radio:checked + &__button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; // Must be negative (research this later)
-
-    background-image: linear-gradient(
-      45deg,
-      var(--color-primary),
-      var(--color-primary)
-    );
-    border-radius: 100px;
-    height: 100%;
-    width: 100%;
+  // When the radio is NOT checked, target the associated button
+  &__radio:not(:checked) + &__button {
+    color: currentColor;
+  }
+  // When the radio is NOT checked, target the ::before of the button
+  &__radio:not(:checked) + &__button:before {
   }
 }
