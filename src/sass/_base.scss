@@ -29,6 +29,15 @@ $bp-small: 37.5em; // ---- 600px
 $bp-smallest: 31.25em; // ---- 500px
 $bp-phone: 25em; // ---- 400px
 
+.u-unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px, 10px / 16px = 62.5%

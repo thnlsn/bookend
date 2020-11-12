@@ -19,29 +19,15 @@ const FlightView = ({ origin, destination, roundTrip }) => {
         <div className='switch-input'>
           <input
             type='radio'
-            id='round-trip'
-            className='switch-input__radio'
-            name='switch-toggle'
-            defaultChecked
-          />
-          <label
-            htmlFor='round-trip'
-            className='switch-input__button switch-input__button--left'
-          >
-            Round Trip
-          </label>
-
-          <input
-            type='radio'
-            id='one-way'
+            id='detour'
             className='switch-input__radio'
             name='switch-toggle'
           />
           <label
-            htmlFor='one-way'
-            className='switch-input__button switch-input__button--right'
+            htmlFor='detour'
+            className='switch-input__button switch-input__button--left u-unselectable'
           >
-            One Way
+            Detour
           </label>
         </div>
       </div>

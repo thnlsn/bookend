@@ -13,6 +13,20 @@
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --line: 1px solid var(--color-grey-light-2); }
 
+.u-unselectable {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */ }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
@@ -148,6 +162,7 @@ body {
   justify-content: space-evenly; }
   .flight__airport {
     cursor: pointer;
+    flex: 0 0 20%;
     transition: color 0.12s; }
     .flight__airport:hover {
       color: var(--color-grey-dark-3); }
@@ -164,7 +179,7 @@ body {
 
 .switch-input {
   display: flex;
-  justify-content: center; }
+  justify-content: space-evenly; }
   .switch-input__button {
     border: none;
     text-align: center;
@@ -175,9 +190,7 @@ body {
     position: relative;
     z-index: 1;
     outline: none;
-    cursor: pointer;
-    transition: all 0.5s ease 0.015s;
-    transform-origin: center; }
+    cursor: pointer; }
     .switch-input__button::before, .switch-input__button::after {
       content: '';
       position: absolute;
@@ -185,26 +198,19 @@ body {
       left: 0;
       border-radius: 100px;
       height: 100%;
-      width: 100%;
-      transition: transform 0.4s cubic-bezier(0.55, 0.33, 0, 0.99) 0.05s; }
+      width: 100%; }
     .switch-input__button::before {
       z-index: -1; }
     .switch-input__button::after {
       background-color: var(--color-grey-light-1);
       z-index: -100; }
-    .switch-input__button--left::before {
-      transform: translateX(calc(100% + 2rem)); }
-    .switch-input__button--right::before {
-      transform: translateX(calc(-100% - 2rem)); }
   .switch-input__radio {
     display: none; }
   .switch-input__radio:checked + .switch-input__button {
     color: var(--color-grey-light-1); }
   .switch-input__radio:checked + .switch-input__button::before {
-    background-color: var(--color-primary);
+    background-color: blueviolet;
     transform: translateX(0); }
-  .switch-input__radio:not(:checked) + .switch-input__button {
-    color: currentColor; }
 
 .logo {
   height: 3.25rem;

@@ -17,6 +17,7 @@
   // Container for the Code and City
   &__airport {
     cursor: pointer;
+    flex: 0 0 20%; // So it is truly centered since the space evenly will match since all basis are the same
 
     transition: color 0.12s;
 
@@ -55,8 +56,9 @@
 // TRIP TYPE BUTTON ////////////////////////////////////////////////////////////////////////////////////////
 .switch-input {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 
+  // All buttons
   &__button {
     border: none;
     text-align: center;
@@ -73,10 +75,6 @@
     outline: none;
     cursor: pointer;
 
-    // Initial animation state
-    transition: all 0.5s ease 0.015s;
-    transform-origin: center;
-
     &::before,
     &::after {
       content: '';
@@ -87,9 +85,6 @@
       border-radius: 100px;
       height: 100%;
       width: 100%;
-
-      // Initial animation state
-      transition: transform 0.4s cubic-bezier(0.55, 0.33, 0, 0.99) 0.05s;
     }
 
     &::before {
@@ -99,14 +94,6 @@
     &::after {
       background-color: var(--color-grey-light-1);
       z-index: -100;
-    }
-
-    &--left::before {
-      // Initial
-      transform: translateX(calc(100% + 2rem));
-    }
-    &--right::before {
-      transform: translateX(calc(-100% - 2rem));
     }
   }
 
@@ -120,15 +107,7 @@
   }
   // When the radio is checked, target the ::before of the button
   &__radio:checked + &__button::before {
-    background-color: var(--color-primary);
+    background-color: blueviolet;
     transform: translateX(0);
-  }
-
-  // When the radio is NOT checked, target the associated button
-  &__radio:not(:checked) + &__button {
-    color: currentColor;
-  }
-  // When the radio is NOT checked, target the ::before of the button
-  &__radio:not(:checked) + &__button:before {
   }
 }
