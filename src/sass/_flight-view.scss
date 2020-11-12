@@ -53,51 +53,37 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // TRIP TYPE BUTTON ////////////////////////////////////////////////////////////////////////////////////////
-.switch-button {
-  display: inline-block;
-  font-size: 1.5rem;
-  color: var(--color-grey-light-1);
-  border: none;
-  text-align: center;
+.switch-input {
+  display: flex;
+  justify-content: center;
 
-  border-radius: 100px;
+  &__button {
+    border: none;
+    text-align: center;
 
-  margin: 0 1rem;
-  padding: 1.8rem 6rem;
-  flex: 0 0 22.5%;
+    border-radius: 100px;
 
-  position: relative;
-  z-index: 1; // Enough to be above the background
+    margin: 0 1rem;
+    padding: 1.8rem 6rem;
+    flex: 0 0 22.5%;
 
-  outline: none;
-  cursor: pointer;
+    position: relative;
+    z-index: 1; // Enough to be above the background
+
+    outline: none;
+    cursor: pointer;
+  }
 
   &__radio {
     display: none;
   }
 
-  /*   &:active::before {
-    transform: translateX(calc(100% + 2rem));
-  } */
+  &__radio:checked + &__button {
+    color: var(--color-grey-light-1);
+    background-color: var(--color-grey-light-3);
+  }
 
-  /*   &--left::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; // Must be negative (research this later)
-
-    background-image: linear-gradient(
-      45deg,
-      var(--color-primary),
-      var(--color-primary)
-    );
-    border-radius: 100px;
-    height: 100%;
-    width: 100%;
-  } */
-
-  &__radio:checked + &:before {
+  &__radio:checked + &__button::before {
     content: '';
     position: absolute;
     top: 0;

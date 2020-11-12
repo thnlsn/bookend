@@ -16,29 +16,34 @@ const FlightView = ({ origin, destination, roundTrip }) => {
       </div>
 
       <div className='trip'>
-        <input
-          type='radio'
-          id='round-trip'
-          className='switch-button__radio'
-          name='switch-toggle'
-        />
-        <label
-          htmlFor='round-trip'
-          className='switch-button switch-button--left'
-        >
-          Round Trip
-        </label>
+        <div className='switch-input'>
+          <input
+            type='radio'
+            id='round-trip'
+            className='switch-input__radio'
+            name='switch-toggle'
+            defaultChecked
+          />
+          <label
+            htmlFor='round-trip'
+            className='switch-input__button switch-input__button--left'
+          >
+            Round Trip
+          </label>
 
-        <input
-          type='radio'
-          id='one-way'
-          className='switch-button__radio'
-          name='switch-toggle'
-          defaultChecked
-        />
-        <label htmlFor='one-way' className='switch-button switch-button--right'>
-          One Way
-        </label>
+          <input
+            type='radio'
+            id='one-way'
+            className='switch-input__radio'
+            name='switch-toggle'
+          />
+          <label
+            htmlFor='one-way'
+            className='switch-input__button switch-input__button--right'
+          >
+            One Way
+          </label>
+        </div>
       </div>
     </Fragment>
   );

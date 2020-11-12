@@ -130,9 +130,8 @@ body {
       margin-top: 3rem; } }
 
 .trip {
-  margin: 2.5rem 0;
-  display: flex;
-  justify-content: center; }
+  font-size: 1.5rem;
+  margin: 2.5rem 0; }
 
 .flight {
   font-size: 10rem;
@@ -162,42 +161,26 @@ body {
     color: var(--color-primary-dark);
     margin-top: -2rem; }
 
-.switch-button {
-  display: inline-block;
-  font-size: 1.5rem;
-  color: var(--color-grey-light-1);
-  border: none;
-  text-align: center;
-  border-radius: 100px;
-  margin: 0 1rem;
-  padding: 1.8rem 6rem;
-  flex: 0 0 22.5%;
-  position: relative;
-  z-index: 1;
-  outline: none;
-  cursor: pointer;
-  /*   &:active::before {
-    transform: translateX(calc(100% + 2rem));
-  } */
-  /*   &--left::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; // Must be negative (research this later)
-
-    background-image: linear-gradient(
-      45deg,
-      var(--color-primary),
-      var(--color-primary)
-    );
+.switch-input {
+  display: flex;
+  justify-content: center; }
+  .switch-input__button {
+    border: none;
+    text-align: center;
     border-radius: 100px;
-    height: 100%;
-    width: 100%;
-  } */ }
-  .switch-button__radio {
+    margin: 0 1rem;
+    padding: 1.8rem 6rem;
+    flex: 0 0 22.5%;
+    position: relative;
+    z-index: 1;
+    outline: none;
+    cursor: pointer; }
+  .switch-input__radio {
     display: none; }
-  .switch-button__radio:checked + .switch-button:before {
+  .switch-input__radio:checked + .switch-input__button {
+    color: var(--color-grey-light-1);
+    background-color: var(--color-grey-light-3); }
+  .switch-input__radio:checked + .switch-input__button::before {
     content: '';
     position: absolute;
     top: 0;
