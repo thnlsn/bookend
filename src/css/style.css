@@ -167,18 +167,18 @@ body {
   font-size: 1.5rem;
   color: var(--color-grey-light-1);
   border: none;
+  text-align: center;
   border-radius: 100px;
-  background-color: transparent;
   margin: 0 1rem;
   padding: 1.8rem 6rem;
+  flex: 0 0 22.5%;
   position: relative;
   z-index: 1;
   outline: none;
   cursor: pointer; }
-  .switch-buttonspan {
-    position: relative;
-    z-index: 200; }
-  .switch-button::before {
+  .switch-button:active::before {
+    transform: translateX(calc(100% + 2rem)); }
+  .switch-button--left::before {
     content: '';
     position: absolute;
     top: 0;
@@ -188,6 +188,8 @@ body {
     border-radius: 100px;
     height: 100%;
     width: 100%; }
+  .switch-button__radio {
+    display: none; }
 
 .logo {
   height: 3.25rem;
