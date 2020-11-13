@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EditableCell = ({ cellData, onTableUpdate }) => {
+const EditableCell = ({ cellData, onTableUpdate, placeholder }) => {
   return (
     <input
       className='editable-table__cell'
@@ -9,7 +9,7 @@ const EditableCell = ({ cellData, onTableUpdate }) => {
       id={cellData.id}
       value={cellData.value}
       onChange={onTableUpdate}
-      placeholder={'text'}
+      placeholder={placeholder}
     />
   );
 };

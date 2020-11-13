@@ -214,6 +214,7 @@ body {
 
 /* General layout for the table container */
 .tour-table {
+  color: black;
   width: 80%;
   margin: 4rem auto;
   --color-blue-light: #daf2f5;
@@ -228,6 +229,7 @@ body {
 
 .editable-table__cell {
   font-size: 1rem;
+  color: inherit;
   text-align: inherit;
   box-sizing: border-box;
   flex-grow: 1;
@@ -236,18 +238,25 @@ body {
   overflow: hidden;
   list-style: none;
   outline: none;
-  transition: all 0.2s;
+  transition: all 0.1s;
   border: solid 1px black; }
   .editable-table__cell--header {
     border: none; }
   .editable-table__cell:focus {
     border: dotted 1px black;
-    backdrop-filter: brightness(90%); }
+    color: gray; }
+  .editable-table__cell:focus::placeholder {
+    transition: all 0.1s;
+    color: white; }
   .editable-table__cell--blue {
     background-color: var(--color-blue-light); }
 
 .editable-table__add-button {
-  width: 100%; }
+  width: 100%;
+  border: solid 1px black;
+  font-size: inherit;
+  padding: 0.8em 1.2em;
+  background-color: var(--color-blue-light); }
 
 .editable-table__del-cell {
   display: inline-block;

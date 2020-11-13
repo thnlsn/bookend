@@ -31,7 +31,7 @@ const ToursView = () => {
     {
       id: (new Date() + Math.floor(Math.random() * 999999)).toString(36),
       name: 'Jaden Dark',
-      email: 'jdallas@gmail.com',
+      email: 'jdark@gmail.com',
       course: 'Astronomy 101',
       tutor: 'Artis Santiago',
       tutorEmail: 'asantiago@gmail.com',
@@ -106,6 +106,9 @@ const ToursView = () => {
         onTableUpdate={handleTable}
         onRowAdd={handleAddEvent}
         onRowDel={handleRowDel}
+        addButton={'+ Add Instructor'}
+        delButton={true}
+        bgColors={['--blue']}
       />
     </div>
   );

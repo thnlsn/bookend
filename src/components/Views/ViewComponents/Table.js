@@ -2,14 +2,25 @@ import React, { Fragment } from 'react';
 
 import TableRow from './TableRow';
 
-const Table = ({ headers, items, onTableUpdate, onRowAdd, onRowDel }) => {
+const Table = ({
+  headers,
+  items,
+  onTableUpdate,
+  onRowAdd,
+  onRowDel,
+  addButton,
+  delButton,
+}) => {
   let item = items.map((item) => {
+    console.log(headers);
     return (
       <TableRow
         onTableUpdate={onTableUpdate}
         rowItem={item}
         onDelEvent={onRowDel}
+        delButton={delButton}
         key={item.id}
+        placeholders={headers}
       />
     );
   });
@@ -17,22 +28,27 @@ const Table = ({ headers, items, onTableUpdate, onRowAdd, onRowDel }) => {
   return (
     <Fragment>
       <div className={`editable-table editable-table--${headers.length}cols`}>
-        {headers.map((header) => (
+        {headers.map((header, index) => (
           <div className='editable-table__cell editable-table__cell--header'>
             {header}
           </div>
         ))}
-        <div className='editable-table__del-cell editable-table__del-cell--header'></div>
+        {delButton && (
+          <div className='editable-table__del-cell editable-table__del-cell--header'></div>
+        )}
 
         {item}
       </div>
-      <button
-        type='button'
-        onClick={onRowAdd}
-        className='editable-table__add-button'
-      >
-        Add Row
-      </button>
+
+      {addButton && (
+        <button
+          type='button'
+          onClick={onRowAdd}
+          className='editable-table__add-button'
+        >
+          {addButton}
+        </button>
+      )}
     </Fragment>
   );
 };
