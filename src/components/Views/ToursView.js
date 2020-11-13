@@ -30,7 +30,7 @@ const ToursView = () => {
     },
     {
       id: (new Date() + Math.floor(Math.random() * 999999)).toString(36),
-      name: 'Jaden Dallas',
+      name: 'Jaden Dark',
       email: 'jdallas@gmail.com',
       course: 'Astronomy 101',
       tutor: 'Artis Santiago',

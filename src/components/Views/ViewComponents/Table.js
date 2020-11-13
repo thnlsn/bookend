@@ -18,8 +18,11 @@ const Table = ({ headers, items, onTableUpdate, onRowAdd, onRowDel }) => {
     <Fragment>
       <div className={`editable-table editable-table--${headers.length}cols`}>
         {headers.map((header) => (
-          <div className='editable-table__cell'>{header}</div>
+          <div className='editable-table__cell editable-table__cell--header'>
+            {header}
+          </div>
         ))}
+        <div className='editable-table__del-cell editable-table__del-cell--header'></div>
 
         {item}
       </div>

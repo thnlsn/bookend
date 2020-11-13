@@ -215,9 +215,12 @@ body {
 /* General layout for the table container */
 .tour-table {
   width: 80%;
-  margin: 4rem auto; }
+  margin: 4rem auto;
+  --color-blue-light: #daf2f5;
+  --color-green-light: #beefdf; }
 
 .editable-table {
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -225,34 +228,46 @@ body {
 
 .editable-table__cell {
   font-size: 1rem;
+  text-align: inherit;
   box-sizing: border-box;
   flex-grow: 1;
   width: 100%;
   padding: 0.8em 1.2em;
   overflow: hidden;
   list-style: none;
-  border: solid 1px black;
-  background-color: powderblue; }
+  outline: none;
+  transition: all 0.2s;
+  border: solid 1px black; }
+  .editable-table__cell--header {
+    border: none; }
+  .editable-table__cell:focus {
+    border: dotted 1px black;
+    backdrop-filter: brightness(90%); }
+  .editable-table__cell--blue {
+    background-color: var(--color-blue-light); }
 
 .editable-table__add-button {
   width: 100%; }
 
-.editable-table__del-button {
-  position: absolute;
-  right: 0;
-  top: 0; }
+.editable-table__del-cell {
+  display: inline-block;
+  border: solid 1px black;
+  background-color: #fff;
+  flex: 1 0 3%; }
+  .editable-table__del-cell--header {
+    border: none; }
 
 .editable-table--2cols > .editable-table__cell {
-  width: 50%; }
+  width: 42.5%; }
 
 .editable-table--3cols > .editable-table__cell {
-  width: 33.33%; }
+  width: 28.333333%; }
 
 .editable-table--4cols > .editable-table__cell {
-  width: 25%; }
+  width: 21.25%; }
 
 .editable-table--5cols > .editable-table__cell {
-  width: 20%; }
+  width: 17%; }
 
 .editable-table--6cols > .editable-table__cell {
   width: 16.6%; }

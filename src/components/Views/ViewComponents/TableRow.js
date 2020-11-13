@@ -17,16 +17,15 @@ const TableRow = ({ onTableUpdate, rowItem, onDelEvent }) => {
           }}
         />
       ))}
-
-      {/*       <input
-        className='editable-table__del-button'
+      <button
         type='button'
         // Function for delete row
         onClick={onDelEvent}
         name={rowItem.id}
-        value='X'
-        className='table-row__del-button'
-      /> */}
+        className='editable-table__del-cell'
+      >
+        x
+      </button>
     </Fragment>
   );
 };
