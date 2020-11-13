@@ -32,16 +32,42 @@ const ToursView = () => {
     }
   );
 
-  handleRowDel(itemToDelete) {
+  const handleRowDel = (itemToDelete) => {
     let dataCopy = tableData; // Copy of the table data
-    var index = dataCopy.indexOf(itemToDelete); // Index of the row to delete
+    let index = dataCopy.indexOf(itemToDelete); // Index of the row to delete
     dataCopy.splice(index, 1); // Splice it from the array of table rows
     setTableData(dataCopy); // Set the state to the new current table
   };
 
-  return <div className='tour-table'></div>;
-};
+  const handleAddEvent = (event) => {
+    let dataCopy = tableData; // Copy of the table data
+    var id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36); // Generate random id to associate to each item
+    var itemToAdd = {
+      id: id,
+      name: '',
+      email: '',
+      course: '',
+      tutor: '',
+      tutorEmail: '',
+    };
+    dataCopy.push(itemToAdd);
+    setTableData(dataCopy);
+  };
 
+  const handleTable = (event) => {
+    var item = {
+      id: event.target.id,
+      name: event.target.name,
+      value: event.target.value,
+    };
+  };
+
+  return (
+    <Fragment>
+      <div className='tour-table'></div>
+    </Fragment>
+  );
+};
 export default ToursView;
 
 // Inital data is used to generate a table
