@@ -1,0 +1,28 @@
+/* General layout for the table container */
+.tour-table {
+  background-color: yellowgreen;
+}
+
+/* The table itself */
+.editable-table {
+  table-layout: fixed;
+  background-color: orangered;
+
+  &__header-row {
+    th {
+      width: 20%;
+    }
+  }
+
+  &__add-button {
+    width: 100%;
+  }
+
+  // tr
+  &__row {
+  }
+
+  // td
+  &__cell {
+  }
+}

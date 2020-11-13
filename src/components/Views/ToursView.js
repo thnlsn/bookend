@@ -97,6 +97,13 @@ const ToursView = () => {
   return (
     <div className='tour-table'>
       <Table
+        headers={[
+          'Instructor',
+          'Email Address',
+          'Course Name',
+          'Student Leader',
+          'Tutor Email',
+        ]}
         onTableUpdate={handleTable}
         onRowAdd={handleAddEvent}
         onRowDel={handleRowDel}

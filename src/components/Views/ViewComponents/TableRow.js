@@ -1,9 +1,9 @@
 import React from 'react';
 import EditableCell from './EditableCell';
 
-const TableRow = ({ onTableUpdate, rowItem, onDelEvent, key }) => {
+const TableRow = ({ onTableUpdate, rowItem, onDelEvent }) => {
   return (
-    <tr className='table-row'>
+    <tr className='editable-table__row'>
       <EditableCell
         onTableUpdate={onTableUpdate}
         cellData={{

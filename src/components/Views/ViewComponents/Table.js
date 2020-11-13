@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 import TableRow from './TableRow';
 
-const Table = ({ onTableUpdate, onRowAdd, onRowDel, items }) => {
+const Table = ({ headers, onTableUpdate, onRowAdd, onRowDel, items }) => {
   let item = items.map((item) => {
     return (
       <TableRow
@@ -18,12 +18,10 @@ const Table = ({ onTableUpdate, onRowAdd, onRowDel, items }) => {
     <Fragment>
       <table className='editable-table'>
         <thead>
-          <tr>
-            <th>Instructor</th>
-            <th>Email Address</th>
-            <th>Course Name</th>
-            <th>Student Leader</th>
-            <th>Tutor Email</th>
+          <tr className='editable-table__header-row'>
+            {headers.map((header) => (
+              <th>{header}</th>
+            ))}
           </tr>
         </thead>
 
