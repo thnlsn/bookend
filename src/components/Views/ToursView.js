@@ -6,35 +6,35 @@ const ToursView = () => {
   const [tableData, setTableData] = useState([
     {
       id: (new Date() + Math.floor(Math.random() * 999999)).toString(36),
-      name: 'John Doe',
-      email: 'jdoe@gmail.com',
-      course: 'Astrology 101',
-      tutor: 'Alex Smith',
-      tutorEmail: 'asmith@gmail.com',
+      name: 'Robert Ford',
+      email: 'rford@delos.com',
+      course: 'Computer Science 101',
+      tutor: 'Bernard Lowe',
+      tutorEmail: 'blowe@delos.com',
     },
     {
       id: (new Date() + Math.floor(Math.random() * 999999)).toString(36),
-      name: 'Jason Dawson',
-      email: 'jdawson@gmail.com',
-      course: 'Art 101',
-      tutor: 'Aiden Smalls',
-      tutorEmail: 'asmalls@gmail.com',
+      name: 'Teresa Cullen',
+      email: 'tcullen@gmail.com',
+      course: 'Management 101',
+      tutor: 'Charlotte Hale',
+      tutorEmail: 'chale@gmail.com',
     },
     {
       id: (new Date() + Math.floor(Math.random() * 999999)).toString(36),
-      name: 'Joseph Davidson',
-      email: 'jdavidson@gmail.com',
-      course: 'Anatomy 101',
-      tutor: 'Aaron Samson',
-      tutorEmail: 'asamson@gmail.com',
+      name: 'Lee Sizemore',
+      email: 'lsizemore@gmail.com',
+      course: 'Creative Writing 101',
+      tutor: 'Dolores Abernathy',
+      tutorEmail: 'dabernathy@gmail.com',
     },
     {
       id: (new Date() + Math.floor(Math.random() * 999999)).toString(36),
-      name: 'Jaden Dark',
-      email: 'jdark@gmail.com',
-      course: 'Astronomy 101',
-      tutor: 'Artis Santiago',
-      tutorEmail: 'asantiago@gmail.com',
+      name: 'Ashley Stubbs',
+      email: 'astubbs@gmail.com',
+      course: 'Cybersecurity 101',
+      tutor: 'Elsie Hughes',
+      tutorEmail: 'ehughes@gmail.com',
     },
   ]);
 
@@ -108,7 +108,6 @@ const ToursView = () => {
         onRowDel={handleRowDel}
         addButton={'+ Add Instructor'}
         delButton={true}
-        bgColors={['--blue']}
       />
     </div>
   );

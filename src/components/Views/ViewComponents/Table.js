@@ -12,7 +12,6 @@ const Table = ({
   delButton,
 }) => {
   let item = items.map((item) => {
-    console.log(headers);
     return (
       <TableRow
         onTableUpdate={onTableUpdate}

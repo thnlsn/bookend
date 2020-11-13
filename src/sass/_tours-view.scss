@@ -35,6 +35,10 @@
     border: none;
   }
 
+  &--blue {
+    background-color: var(--color-blue-light);
+  }
+
   &:focus {
     border: dotted 1px black;
     color: gray;
@@ -43,10 +47,6 @@
   &:focus::placeholder {
     transition: all 0.1s;
     color: white;
-  }
-
-  &--blue {
-    background-color: var(--color-blue-light);
   }
 }
 
@@ -85,4 +85,19 @@
 }
 .editable-table--6cols > .editable-table__cell {
   width: 16.6%;
+}
+
+.editable-table--5cols > .editable-table__cell:nth-child(12n + 7),
+.editable-table--5cols > .editable-table__del-cell:nth-child(12n + 7),
+.editable-table--5cols > .editable-table__cell:nth-child(12n + 8),
+.editable-table--5cols > .editable-table__del-cell:nth-child(12n + 8),
+.editable-table--5cols > .editable-table__cell:nth-child(12n + 9),
+.editable-table--5cols > .editable-table__del-cell:nth-child(12n + 9),
+.editable-table--5cols > .editable-table__cell:nth-child(12n + 10),
+.editable-table--5cols > .editable-table__del-cell:nth-child(12n + 10),
+.editable-table--5cols > .editable-table__cell:nth-child(12n + 11),
+.editable-table--5cols > .editable-table__del-cell:nth-child(12n + 11),
+.editable-table--5cols > .editable-table__cell:nth-child(12n + 12),
+.editable-table--5cols > .editable-table__del-cell:nth-child(12n + 12) {
+  background-color: var(--color-blue-light);
 }

@@ -8,20 +8,21 @@ const TableRow = ({
   delButton,
   placeholders,
 }) => {
-  let keys = Object.keys(rowItem); // They keys of the object
-  keys.shift();
+  let objKeys = Object.keys(rowItem); // They keys of the object
+  objKeys.shift();
 
   return (
     <Fragment>
-      {keys.map((key, index) => (
+      {objKeys.map((objKey, index) => (
         <EditableCell
           onTableUpdate={onTableUpdate}
           cellData={{
-            type: key,
-            value: rowItem[`${key}`], // bracket notation to access the value at the key passed in
+            type: objKey,
+            value: rowItem[`${objKey}`], // bracket notation to access the value at the key passed in
             id: rowItem.id,
           }}
           placeholder={placeholders[index]}
+          key={rowItem.id}
         />
       ))}
       {delButton && (
