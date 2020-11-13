@@ -1,8 +1,11 @@
 import React, { useState, useEffect, Fragment } from 'react';
 
+import Table from './ViewComponents/Table';
+
 const ToursView = () => {
-  const [tableData, setTableData] = useState(
+  const [tableData, setTableData] = useState([
     {
+      id: '1',
       name: 'John Doe',
       email: 'jdoe@gmail.com',
       course: 'Astrology 101',
@@ -10,6 +13,7 @@ const ToursView = () => {
       tutorEmail: 'asmith@gmail.com',
     },
     {
+      id: '2',
       name: 'Jason Dawson',
       email: 'jdawson@gmail.com',
       course: 'Art 101',
@@ -17,6 +21,7 @@ const ToursView = () => {
       tutorEmail: 'asmalls@gmail.com',
     },
     {
+      id: '3',
       name: 'Joseph Davidson',
       email: 'jdavidson@gmail.com',
       course: 'Anatomy 101',
@@ -24,25 +29,35 @@ const ToursView = () => {
       tutorEmail: 'asamson@gmail.com',
     },
     {
+      id: '4',
       name: 'Jaden Dallas',
       email: 'jdallas@gmail.com',
       course: 'Astronomy 101',
       tutor: 'Artis Santiago',
       tutorEmail: 'asantiago@gmail.com',
-    }
-  );
+    },
+  ]);
 
-  const handleRowDel = (itemToDelete) => {
+  const handleRowDel = (event) => {
     let dataCopy = tableData; // Copy of the table data
-    let index = dataCopy.indexOf(itemToDelete); // Index of the row to delete
+
+    let index = dataCopy
+      .map((item) => {
+        return item.id;
+      })
+      .indexOf(event.target.name); // Index of the row to delete
+
+    /*     let index = dataCopy.indexOf(event.target.name); // Index of the row to delete */
     dataCopy.splice(index, 1); // Splice it from the array of table rows
-    setTableData(dataCopy); // Set the state to the new current table
+    setTableData([...dataCopy]); // Set the state to the new current table
   };
 
   const handleAddEvent = (event) => {
+    console.log('add event');
     let dataCopy = tableData; // Copy of the table data
-    var id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36); // Generate random id to associate to each item
-    var itemToAdd = {
+    console.log(dataCopy);
+    let id = (new Date() + Math.floor(Math.random() * 999999)).toString(36); // Generate random id to associate to each item
+    let itemToAdd = {
       id: id,
       name: '',
       email: '',
@@ -51,24 +66,50 @@ const ToursView = () => {
       tutorEmail: '',
     };
     dataCopy.push(itemToAdd);
-    setTableData(dataCopy);
+    setTableData([...dataCopy]);
   };
 
   const handleTable = (event) => {
-    var item = {
+    let dataCopy = tableData; // Copy of the table data
+
+    // item is the name of the variable for an item
+    console.log(event.target);
+    let item = {
       id: event.target.id,
       name: event.target.name,
       value: event.target.value,
     };
+    let rows = dataCopy.slice();
+    let newRows = rows.map((row) => {
+      // for each key in row
+      for (let key in row) {
+        // if key is the same as item name AND id is the same as item id, then set the key to the item value
+        if (key === item.name && row.id === item.id) {
+          row[key] = item.value;
+        }
+      }
+      return row;
+    });
+    setTableData([...newRows]);
+    console.log(tableData);
   };
 
   return (
-    <Fragment>
-      <div className='tour-table'></div>
-    </Fragment>
+    <div className='tour-table'>
+      <Table
+        onTableUpdate={handleTable}
+        onRowAdd={handleAddEvent}
+        onRowDel={handleRowDel}
+        items={tableData}
+      />
+    </div>
   );
 };
 export default ToursView;
 
 // Inital data is used to generate a table
 // A form is used to hold data that can be pushed into the state that generates the table
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
