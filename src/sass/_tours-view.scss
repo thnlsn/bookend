@@ -1,13 +1,13 @@
 /* General layout for the table container */
 .tour-table {
-  background-color: yellowgreen;
+  width: 80%;
+  margin: 4rem auto;
 }
 
 .editable-table {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-
   position: relative;
 }
 
@@ -19,8 +19,8 @@
   padding: 0.8em 1.2em;
   overflow: hidden; // Or flex might break
   list-style: none;
-  border: solid 3px white;
-  background-color: orangered;
+  border: solid 1px black;
+  background-color: powderblue;
 }
 
 .editable-table__add-button {
@@ -29,6 +29,8 @@
 
 .editable-table__del-button {
   position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .editable-table--2cols > .editable-table__cell {
