@@ -216,14 +216,43 @@ body {
 .tour-table {
   background-color: yellowgreen; }
 
-/* The table itself */
 .editable-table {
-  table-layout: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  position: relative; }
+
+.editable-table__cell {
+  font-size: 1rem;
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0.8em 1.2em;
+  overflow: hidden;
+  list-style: none;
+  border: solid 3px white;
   background-color: orangered; }
-  .editable-table__header-row th {
-    width: 20%; }
-  .editable-table__add-button {
-    width: 100%; }
+
+.editable-table__add-button {
+  width: 100%; }
+
+.editable-table__del-button {
+  position: absolute; }
+
+.editable-table--2cols > .editable-table__cell {
+  width: 50%; }
+
+.editable-table--3cols > .editable-table__cell {
+  width: 33.33%; }
+
+.editable-table--4cols > .editable-table__cell {
+  width: 25%; }
+
+.editable-table--5cols > .editable-table__cell {
+  width: 20%; }
+
+.editable-table--6cols > .editable-table__cell {
+  width: 16.6%; }
 
 .logo {
   height: 3.25rem;

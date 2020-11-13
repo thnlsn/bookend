@@ -1,11 +1,11 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState } from 'react';
 
 import Table from './ViewComponents/Table';
 
 const ToursView = () => {
   const [tableData, setTableData] = useState([
     {
-      id: '1',
+      id: (new Date() + Math.floor(Math.random() * 999999)).toString(36),
       name: 'John Doe',
       email: 'jdoe@gmail.com',
       course: 'Astrology 101',
@@ -13,7 +13,7 @@ const ToursView = () => {
       tutorEmail: 'asmith@gmail.com',
     },
     {
-      id: '2',
+      id: (new Date() + Math.floor(Math.random() * 999999)).toString(36),
       name: 'Jason Dawson',
       email: 'jdawson@gmail.com',
       course: 'Art 101',
@@ -21,7 +21,7 @@ const ToursView = () => {
       tutorEmail: 'asmalls@gmail.com',
     },
     {
-      id: '3',
+      id: (new Date() + Math.floor(Math.random() * 999999)).toString(36),
       name: 'Joseph Davidson',
       email: 'jdavidson@gmail.com',
       course: 'Anatomy 101',
@@ -29,7 +29,7 @@ const ToursView = () => {
       tutorEmail: 'asamson@gmail.com',
     },
     {
-      id: '4',
+      id: (new Date() + Math.floor(Math.random() * 999999)).toString(36),
       name: 'Jaden Dallas',
       email: 'jdallas@gmail.com',
       course: 'Astronomy 101',
@@ -53,9 +53,7 @@ const ToursView = () => {
   };
 
   const handleAddEvent = (event) => {
-    console.log('add event');
     let dataCopy = tableData; // Copy of the table data
-    console.log(dataCopy);
     let id = (new Date() + Math.floor(Math.random() * 999999)).toString(36); // Generate random id to associate to each item
     let itemToAdd = {
       id: id,
@@ -104,10 +102,10 @@ const ToursView = () => {
           'Student Leader',
           'Tutor Email',
         ]}
+        items={tableData}
         onTableUpdate={handleTable}
         onRowAdd={handleAddEvent}
         onRowDel={handleRowDel}
-        items={tableData}
       />
     </div>
   );

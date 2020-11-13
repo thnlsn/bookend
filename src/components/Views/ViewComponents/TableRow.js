@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import EditableCell from './EditableCell';
 
 const TableRow = ({ onTableUpdate, rowItem, onDelEvent }) => {
   return (
-    <tr className='editable-table__row'>
+    <Fragment>
       <EditableCell
         onTableUpdate={onTableUpdate}
         cellData={{
@@ -44,17 +44,16 @@ const TableRow = ({ onTableUpdate, rowItem, onDelEvent }) => {
           id: rowItem.id,
         }}
       />
-      <td className='table-row__del-cell'>
-        <input
-          type='button'
-          // Function for delete row
-          onClick={onDelEvent}
-          name={rowItem.id}
-          value='X'
-          className='table-row__del-button'
-        />
-      </td>
-    </tr>
+      {/*       <input
+        className='editable-table__del-button'
+        type='button'
+        // Function for delete row
+        onClick={onDelEvent}
+        name={rowItem.id}
+        value='X'
+        className='table-row__del-button'
+      /> */}
+    </Fragment>
   );
 };
 
