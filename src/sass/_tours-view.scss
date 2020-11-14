@@ -15,6 +15,10 @@
   position: relative;
 }
 
+.editable-table ~ .bg-color-blue {
+  background-color: var(--color-blue-light);
+}
+
 .editable-table__cell {
   font-size: 1rem;
   color: inherit;
@@ -25,44 +29,44 @@
   padding: 0.8em 1.2em;
   overflow: hidden; // Or flex might break
   list-style: none;
-
   outline: none;
 
-  transition: all 0.1s;
-  border: solid 1px black;
+  border: solid 1px #000;
 
   &--header {
     border: none;
   }
 
-  &--blue {
-    background-color: var(--color-blue-light);
-  }
-
   &:focus {
-    border: dotted 1px black;
-    color: gray;
+    border: dashed 1px #000;
+    color: #7e7e7e;
   }
 
   &:focus::placeholder {
     transition: all 0.1s;
-    color: white;
+    color: transparent;
   }
 }
 
 .editable-table__add-button {
   width: 100%;
-  border: solid 1px black;
+  border: solid 1px #000;
   font-size: inherit;
   padding: 0.8em 1.2em;
+  outline: 0;
 
-  background-color: var(--color-blue-light);
+  transition: all 0.1s;
+  background-color: #fff;
+  &:hover {
+    filter: brightness(96%);
+  }
 }
 
 .editable-table__del-cell {
   display: inline-block;
-  border: solid 1px black;
+  border: solid 1px #000;
   background-color: #fff;
+  outline: 0;
 
   flex: 1 0 3%; // So the button will always have the same space on all column types
 

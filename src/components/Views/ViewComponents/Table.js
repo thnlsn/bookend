@@ -10,6 +10,7 @@ const Table = ({
   onRowDel,
   addButton,
   delButton,
+  bgColor,
 }) => {
   let item = items.map((item) => {
     return (
@@ -43,7 +44,9 @@ const Table = ({
         <button
           type='button'
           onClick={onRowAdd}
-          className='editable-table__add-button'
+          className={`editable-table__add-button ${
+            items.length % 2 !== 0 ? '' : bgColor
+          }`}
         >
           {addButton}
         </button>
