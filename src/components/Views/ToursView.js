@@ -78,15 +78,37 @@ const ToursView = () => {
           let id = (new Date() + Math.floor(Math.random() * 999999)).toString(
             36
           ); // Generate random id to associate to each item
-          let itemToAdd = {
+
+          // Array of the keys of each key/value pair we want for each row
+          // Dynamically based off the data we put into the table
+          let itemKeys = Object.keys(dataCopy[0]);
+
+          // Empty container that will become the object a new row is based on
+          let itemToAdd = {};
+
+          // For each key (in a key/value pair) for a rows data...
+          itemKeys.map((key, index) => {
+            // For the first key which is always id, set it to a random id
+            if (index === 0) {
+              itemToAdd[`${key}`] = id;
+            } else {
+              // Else, dynamically generate a key with an empty value, as a new row will not have values input yet
+              itemToAdd[`${key}`] = '';
+            }
+          });
+
+          /* let itemToAdd = {
             id: id,
             name: '',
             email: '',
             course: '',
             tutor: '',
             tutorEmail: '',
-          };
+          }; */
+
+          // Push the object of keys with empty values to our data copy
           dataCopy.push(itemToAdd);
+          // Set state so that it updates on the front end with an empty row
           setTableData([...dataCopy]);
         }}
         onRowDel={(event) => {
