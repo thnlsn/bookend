@@ -212,6 +212,9 @@ body {
     background-color: var(--color-primary);
     transform: translateX(0); }
 
+.flight-form {
+  display: flex; }
+
 /* General layout for the table container */
 .tour-table {
   color: black;
