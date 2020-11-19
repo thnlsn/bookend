@@ -47,13 +47,13 @@ const FlightView = ({ origin, destination, roundTrip }) => {
 
       <div className='flight-form'>
         <input
-          type='text'
+          type='date'
           className='flight-form__date'
           placeholder='Departure'
         />
-        <input type='text' className='flight-form__date' placeholder='Return' />
+        <input type='date' className='flight-form__date' placeholder='Return' />
         <div className='flight-form__date'>
-          <select name='' id=''>
+          <select name='Passengers' id=''>
             <option value='0'>0</option>
             <option value='1'>1</option>
             <option value='2'>2</option>
@@ -63,7 +63,13 @@ const FlightView = ({ origin, destination, roundTrip }) => {
             <option value='6'>6</option>
           </select>
         </div>
-        <input type='select' className='flight-form__date' />
+        <div className='flight-form__date'>
+          <select name='Class' id=''>
+            <option value='0'>First Class</option>
+            <option value='1'>Buisiness Class</option>
+            <option value='2'>Economy Class</option>
+          </select>
+        </div>
       </div>
     </Fragment>
   );

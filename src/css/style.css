@@ -213,7 +213,11 @@ body {
     transform: translateX(0); }
 
 .flight-form {
-  display: flex; }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .flight-form__date {
+    flex: 0 0 50%; }
 
 /* General layout for the table container */
 .tour-table {
