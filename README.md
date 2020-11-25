@@ -8,7 +8,7 @@
 
 ## About The Project
 
-This is Bookend, an imaginary app that aims to streamline the booking process for your trip, whether it be buisiness or vacation. Let us bookend your trip by setting you on the right foot and closing it off with details for your return. Book your hotel, flights, car rentals, and maybe even some tours to enjoy while you're there! All of the above is available on Bookend.
+This is Bookend, an imaginary app that aims to streamline the booking process for your next trip, whether for buisiness or vacation. Let us bookend your trip by setting you on the right foot and closing it off with details for your return. Book your hotel, flights, car rentals, and maybe even some tours to enjoy while you're there! All of the above can be done on Bookend.
 
 ## Live Link: [https://thnlsn.github.io/bookend/](https://thnlsn.github.io/bookend/)
 
@@ -16,7 +16,7 @@ Check it out on your phone or tablet, it's fully responsive!
 
 ## Background
 
-This project was built alongside an Advanced CSS & Sass course on uDemy by Jonas Schmedtmann. The project included no JavaScript, however, I built it using **React** and Javascript functionality to add more to the page that would have been impossible limited only to CSS & Sass. For example, the course only included the content of the hotel tab (and being static, there was no way to switch tabs either). The flights, car rentals, and tours views are all built by me utilizing the skills I've learned on my journey of self-teaching. In additon, I also built ...
+This project was built alongside an Advanced CSS & Sass course on uDemy by Jonas Schmedtmann. The project included no JavaScript, however, I built it using **React** and Javascript functionality to add more to the page that would have been impossible limited only to CSS & Sass. For example, the course only included the content of the hotel tab (and being static, there wasn't any way to switch tabs). The flights, car rentals, and tours views are all built by me utilizing the skills I've learned on my journey of self-teaching. In additon, I also built ...
 
 ### Built With
 
